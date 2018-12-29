@@ -1,0 +1,1558 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        <meta name="format-detection" content="telephone=yes, email=yes">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <link rel="stylesheet" type="text/css" href="css/index.css"/>
+        <link href="css/jquery.mobile-1.4.5.min.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="css/theme-classic.css" rel="stylesheet" type="text/css" media="all" />
+        <script src="js/jquery.js" type="text/javascript">    </script>
+        <script src="js/jquery.mobile-1.4.5.min.js" type="text/javascript"></script>
+        <title>Arrows4Revival</title>
+        <style>
+    	/* Listview with collapsible list items. */
+	    .ui-listview > li .ui-collapsible-heading {
+	      margin: 0;
+	    }
+	    .ui-collapsible.ui-li-static {
+	      padding: 0;
+	      border: none !important;
+	    }
+	    .ui-collapsible + .ui-collapsible > .ui-collapsible-heading > .ui-btn {
+	      border-top: none !important;
+	    }
+            /* Nested list button colors */
+	    .ui-listview .ui-listview .ui-btn {
+	    	background: #222;
+	    }
+	    .ui-listview .ui-listview .ui-btn:hover {
+	    	background: #444;
+	    }
+	    .ui-listview .ui-listview .ui-btn:active {
+	    	background: #f1f1f1;
+	    }
+
+	   </style>
+    </head>
+    <body>
+        <div id="main" data-role="page" data-theme="a">
+            <div  data-role="header" data-position="fixed">
+                <a href="#left-panel" data-icon="bars" data-iconpos="notext">Menu</a>
+                <h1 style="text-transform: capitalize;">Koinonia</h1>
+                <div data-role="navbar">
+                    <ul style="text-transform: capitalize;" data-dismissible="false">
+                        <li><a href="#" class="ui-btn-active ui-state-persist" data-icon="home" data-iconpos="top">Profile</a></li>
+                        <li><a href="#gallery" data-icon="camera" data-iconpos="top">Gallery</a></li>
+                        <li><a href="#FYFExcos" data-icon="user" data-iconpos="top" data-prefetch>FYF Excos</a></li>
+                    </ul>            
+
+                </div>
+            </div>
+                     
+           <div data-role="content" style="font-family: myfont1;">
+               <ul  data-role="listview" data-filter='true' data-split-icon="carat-d" data-split-theme="c" data-inset="true" data-theme='b' data-filter-placeholder='Search by name'>
+                 
+                   <li>
+                       <a href="#photo" class='anchor' id='img/1.jpg' title="Agbata Chijioke Izuchukwu" data-transition='pop' data-prefetch>
+                           <img src="img/1.jpg" style='margin:10px;'/>
+                          <h2><small>Agbata Chijioke Izuchukwu</small></h2>
+                         <p><small>Cjagbata@Gmail.Com</small></p>
+                       </a>
+                       <a href='#page1'>Agbata Chijioke Izuchukwu</a>
+                   </li>                     
+                   <li>
+                       <a href="#photo" class='anchor' id='img/2.jpg' title="Agbasimere Chioma Maurine" data-transition='slidedown' data-prefetch>
+                           <img src="img/2.jpg" style='margin:10px;'/>
+                          <h2><small>Agbasimere Chioma Maurine</small></h2>
+                         <p><small> chiomamuarine@yahoo.com</small></p>
+                       </a>
+                       <a href='#page2'>Agbasimere Chioma Maurine</a>
+                   </li>
+                                                        
+                   <li>
+                       <a href="#photo" class='anchor' id='img/3.JPG' title="Chinweze Arinze Everest" data-transition='slide' data-prefetch>
+                           <img src="img/3.JPG" style='margin:10px;'/>
+                          <h2><small>Chinweze Arinze Everest</small></h2>
+                         <p><small>Arinze636@Gmail.Com</small></p>
+                       </a>
+                       <a href='#page3'>Chinweze Arinze Everest</a>
+                   </li>                              
+                   <li>
+                       <a href="#photo" class='anchor' id='img/4.jpg' title="Udechukwu Edith Chinenye" data-transition='slide' data-prefetch>
+                           <img src="img/4.jpg" style='margin:10px;'/>
+                          <h2><small>Udechukwu Edith Chinenye</small></h2>
+                         <p><small>Udechukwunenye@Yahoo.Com </small></p>
+                       </a>
+                       <a href='#page4'>Udechukwu Edith Chinenye</a>
+                   </li>                     
+                   <li>
+                       <a href="#photo" class='anchor' id='img/5.jpg' title="Chukwuchekwa Emmanuel" data-transition='slidedown' data-prefetch>
+                           <img src="img/5.jpg" style='margin:10px;'/>
+                          <h2><small>Chukwuchekwa Emmanuel</small></h2>
+                         <p><small>Chukwuchekwaemmanul@Gmail.Com</small></p>
+                       </a>
+                       <a href='#page5'>Chukwuchekwa Emmanuel</a>
+                   </li>
+                                                        
+                   <li>
+                       <a href="#photo" class='anchor' id='img/34.jpg' title="Ezemokwe Nzubechukwu Oluchi" data-transition='pop' data-prefetch>
+                           <img src="img/34.jpg" style='margin:10px;' width="53"/>
+                          <h2><small>Ezemokwe Nzubechukwu Oluchi</small></h2>
+                         <p><small>Zuluchyy@Gmail.Com</small></p>
+                       </a>
+                       <a href='#page34'>Ezemokwe Nzubechukwu Oluchi</a>
+                   </li>  
+                   
+                   <li>
+                       <a href="#photo" class='anchor' id='img/7.jpg' title="Duru Stanley Chinazu" data-transition='pop' data-prefetch>
+                           <img src="img/7.jpg" style='margin:10px;' width='52'/>
+                          <h2><small>Duru Stanley Chinazu</small></h2>
+                         <p><small>Stan_Ch2007@Yahoo.Com</small></p>
+                       </a>
+                       <a href='#page7'>Duru Stanley Chinazu</a>
+                   </li>                     
+                   <li>
+                       <a href="#photo" class='anchor' id='img/8.jpg' title="Chikwendu Chinwendu" data-transition='slidedown' data-prefetch>
+                           <img src="img/8.jpg" style='margin:10px;'/>
+                          <h2><small>Chikwendu Chinwendu</small></h2>
+                         <p><small>Gemmystic2@Gmail.Com</small></p>
+                       </a>
+                       <a href='#page8'>Chikwendu Chinwendu</a>
+                   </li>
+                                                        
+                   <li>
+                       <a href="#photo" class='anchor' id='img/9.jpg' title="Echezona Nweze" data-transition='slide' data-prefetch>
+                           <img src="img/9.jpg" style='margin:10px;' width='52'/>
+                          <h2><small>Echezona Nweze</small></h2>
+                         <p><small>Echezona4christ@Gmail.Com</small></p>
+                       </a>
+                       <a href='#page9'>Echezona Nweze</a>
+                   </li>
+                   <li>
+                       <a href="#photo" class='anchor' id='img/10.jpg' title="Ifebigh Chinazor Chisom" data-transition='pop' data-prefetch>
+                           <img src="img/10.jpg" style='margin:10px;' width='54'/>
+                          <h2><small>Ifebigh Chinazor Chisom</small></h2>
+                         <p><small>Ifebighc@Gmail.Com</small></p>
+                       </a>
+                       <a href='#page10'>Ifebigh Chinazor Chisom</a>
+                   </li>                     
+                   <li>
+                       <a href="#photo" class='anchor' id='img/11.JPG' title="Enechi Chijioke Michael" data-transition='slidedown' data-prefetch>
+                           <img src="img/11.JPG" style='margin:10px;' width='53'/>
+                          <h2><small>Enechi Chijioke Michael</small></h2>
+                         <p><small>Michealenechi@Gmail.Com</small></p>
+                       </a>
+                       <a href='#page11'>Enechi Chijioke Michael</a>
+                   </li>
+                                                        
+                   <li>
+                       <a href="#photo" class='anchor' id='img/12.jpg' title="Ejikeme Chinenye Divine Hope" data-transition='slide' data-prefetch>
+                           <img src="img/12.jpg" style='margin:10px;' width="53"/>
+                          <h2><small>Ejikeme Chinenye Divine Hope</small></h2>
+                         <p><small>Nenyejoysmart@Gmail.Com</small></p>
+                       </a>
+                       <a href='#page12'>Ejikeme Chinenye Divine Hope</a>
+                   </li>  
+                   
+                   <li>
+                       <a href="#photo" class='anchor' id='img/13.jpg' title="Enemchukwu Chidiebere" data-transition='pop' data-prefetch>
+                           <img src="img/13.jpg" style='margin:10px;' width='53'/>
+                          <h2><small>Enemchukwu Chidiebere</small></h2>
+                         <p><small>Enemchukwu@Gmail.Com</small></p>
+                       </a>
+                       <a href='#page13'>Enemchukwu Chidiebere</a>
+                   </li>                     
+                   <li>
+                       <a href="#photo" class='anchor' id='img/14.jpg' title="Ibezim Chidimma Onyinye" data-transition='slidedown' data-prefetch>
+                           <img src="img/14.jpg" style='margin:10px;'/>
+                          <h2><small>Ibezim Chidimma Onyinye</small></h2>
+                         <p><small>Dmeekangelonline@Gmail.Com</small></p>
+                       </a>
+                       <a href='#page14'>Ibezim Chidimma Onyinye</a>
+                   </li>
+                                                        
+                   <li>
+                       <a href="#photo" class='anchor' id='img/15.jpg' title="Ezike Arinze" data-transition='slide' data-prefetch>
+                           <img src="img/15.jpg" style='margin:10px;' width='53'/>
+                          <h2><small>Ezike Arinze</small></h2>
+                         <p><small></small></p>
+                       </a>
+                       <a href='#page15'>Ezike Arinze</a>
+                   </li>   
+                   <li>
+                       <a href="#photo" class='anchor' id='img/16.jpg' title="Ikezuagu Blessing Chidimma" data-transition='pop' data-prefetch>
+                           <img src="img/16.jpg" style='margin:10px;' width="53"/>
+                          <h2><small>Ikezuagu Blessing Chidimma</small></h2>
+                         <p><small>Blessingchidimma@12gmail.Com</small></p>
+                       </a>
+                       <a href='#page16'>Ikezuagu Blessing Chidimma</a>
+                   </li>                     
+                   <li>
+                       <a href="#photo" class='anchor' id='img/17.jpg' title="Harford, Michael Kenechukwu" data-transition='slidedown' data-prefetch>
+                           <img src="img/17.jpg" style='margin:10px;' width='53'/>
+                          <h2><small>Harford Michael Kenechukwu</small></h2>
+                         <p><small>Mikeharford722@Yahoo.Com</small></p>
+                       </a>
+                       <a href='#page17'>Harford Michael Kenechukwu</a>
+                   </li>                                                        
+                   <li>
+                       <a href="#photo" class='anchor' id='img/18.jpg' title="Ndibe Chiamaka Miriam" data-transition='slide' data-prefetch>
+                           <img src="img/18.jpg" style='margin:10px;'/>
+                          <h2><small>Ndibe Chiamaka Miriam</small></h2>
+                         <p><small>Mirchindibe@Gmail.Com</small></p>
+                       </a>
+                       <a href='#page18'>Ndibe Chiamaka Miriam</a>
+                   </li> 
+                   <li>
+                       <a href="#photo" class='anchor' id='img/19.jpg' title="Ogbonna Ifeanyi" data-transition='pop' data-prefetch>
+                           <img src="img/19.jpg" style='margin:10px;'/>
+                          <h2><small>Ogbonna Ifeanyi</small></h2>
+                         <p><small>Emmaify56@Yahoo.Com</small></p>
+                       </a>
+                       <a href='#page19'>Ogbonna Ifeanyi</a>
+                   </li>                     
+                   <li>
+                       <a href="#photo" class='anchor' id='img/20.jpg' title="Ezebialu Nnedimma Nonyelum" data-transition='slidedown' data-prefetch>
+                           <img src="img/20.jpg" style='margin:10px;'/>
+                          <h2><small>Ezebialu Nnedimma Nonyelum</small></h2>
+                         <p><small>Ezebialunnedimma@Gmail.Com</small></p>
+                       </a>
+                       <a href='#page20'>Ezebialu Nnedimma Nonyelum</a>
+                   </li>
+                                                        
+                   <li>
+                       <a href="#photo" class='anchor' id='img/21.jpg' title="Maduneme Joelson Chinedu" data-transition='slide' data-prefetch>
+                           <img src="img/21.jpg" style='margin:10px;' width='53'/>
+                          <h2><small>Maduneme Joelson Chinedu</small></h2>
+                         <p><small>Joelsonchinedu@Gmail.Com</small></p>
+                       </a>
+                       <a href='#page21'>Maduneme Joelson Chinedu</a>
+                   </li>       
+                   <li>
+                       <a href="#photo" class='anchor' id='img/22.jpg' title="Nwoko Uchechi Chinyere" data-transition='pop' data-prefetch>
+                           <img src="img/22.jpg" style='margin:10px;'/>
+                          <h2><small>Nwoko Uchechi Chinyere</small></h2>
+                         <p><small>Ucheomareal@Gmail.Com</small></p>
+                       </a>
+                       <a href='#page22'>Nwoko Uchechi Chinyere</a>
+                   </li>                     
+                   <li>
+                       <a href="#photo" class='anchor' id='img/23.JPG' title="Ndukuba Crispus Ebube" data-transition='slidedown' data-prefetch>
+                           <img src="img/23.JPG" style='margin:10px;'/>
+                          <h2><small>Ndukuba Crispus Ebube</small></h2>
+                         <p><small>Kcrispus54@Gmail.Com</small></p>
+                       </a>
+                       <a href='#page23'>Ndukuba Crispus Ebube</a>
+                   </li>                                                        
+                   <li>
+                       <a href="#photo" class='anchor' id='img/24.jpg' title="Oguejiofor Oluchukwu Chisom" data-transition='slide' data-prefetch>
+                           <img src="img/24.jpg" style='margin:10px;' width='53'/>
+                          <h2><small>Oguejiofor Oluchukwu Chisom</small></h2>
+                         <p><small>Idejindum@Gmail.Com</small></p>
+                       </a>
+                       <a href='#page24'>Oguejiofor Oluchukwu Chisom</a>
+                   </li> 
+                   <li>
+                       <a href="#photo" class='anchor' id='img/25.jpg' title="Nworgu Ikemefuna Kelvin" data-transition='pop' data-prefetch>
+                           <img src="img/25.jpg" style='margin:10px;'/>
+                          <h2><small>Nworgu Ikemefuna Kelvin</small></h2>
+                         <p><small>Nworguikemefuna6@Gmail.Com</small></p>
+                       </a>
+                       <a href='#page25'>Nworgu Ikemefuna Kelvin</a>
+                   </li>                     
+                   <li>
+                       <a href="#photo" class='anchor' id='img/26.jpg' title="Ojukwu Chisom Ann" data-transition='slidedown' data-prefetch>
+                           <img src="img/26.jpg" style='margin:10px;' width='53'/>
+                          <h2><small>Ojukwu Chisom Ann</small></h2>
+                         <p><small>Ojukwuchisomann@Gmail.Com</small></p>
+                       </a>
+                       <a href='#page26'>Ojukwu Chisom Ann</a>
+                   </li>                                                        
+                   <li>
+                       <a href="#photo" class='anchor' id='img/27.JPG' title="Ogboso Reuben" data-transition='slide' data-prefetch>
+                           <img src="img/27.JPG" style='margin:10px;' width='53'/>
+                          <h2><small>Ogboso Reuben</small></h2>
+                         <p><small>Ogbosoreuben@Gmail.Com</small></p>
+                       </a>
+                       <a href='#page27'>Ogboso Reuben</a>
+                   </li> 
+                   <li>
+                       <a href="#photo" class='anchor' id='img/28.jpg' title="Ojukwu Ifeoma Joyce" data-transition='pop' data-prefetch>
+                           <img src="img/28.jpg" style='margin:10px;' width='53'/>
+                          <h2><small>Ojukwu Ifeoma Joyce</small></h2>
+                         <p><small>Adaorakrea1134@Gmail.Com</small></p>
+                       </a>
+                       <a href='#page28'>Ojukwu Ifeoma Joyce</a>
+                   </li>                     
+                   <li>
+                       <a href="#photo" class='anchor' id='img/29.jpg' title="Okwuosa Chijioke Chinedu" data-transition='slidedown' data-prefetch>
+                           <img src="img/29.jpg" style='margin:10px;'/>
+                          <h2><small>Okwuosa Chijioke Chinedu</small></h2>
+                         <p><small>Okwuosachijioke@Gmail.Com</small></p>
+                       </a>
+                       <a href='#page29'>Okwuosa Chijioke Chinedu</a>
+                   </li>                                                        
+                   <li>
+                       <a href="#photo" class='anchor' id='img/30.jpg' title="Okajiegbe Anthonia" data-transition='slide' data-prefetch>
+                           <img src="img/30.jpg" style='margin:10px;' width='53'/>
+                          <h2><small>Okajiegbe Anthonia</small></h2>
+                         <p><small>Ujunwaanthonia@Gmail.Com</small></p>
+                       </a>
+                       <a href='#page30'>Okajiegbe Anthonia</a>
+                   </li>
+                   <li>
+                       <a href="#photo" class='anchor' id='img/31.jpg' title="Onyegbule Chidubem Joshua" data-transition='pop' data-prefetch>
+                           <img src="img/31.jpg" style='margin:10px;' width='53'/>
+                          <h2><small>Onyegbule Chidubem Joshua</small></h2>
+                         <p><small>Cjaycee.Cj@Gmail.Com</small></p>
+                       </a>
+                       <a href='#page31'>Onyegbule Chidubem Joshua</a>
+                   </li>                     
+                   <li>
+                       <a href="#photo" class='anchor' id='img/32.jpg' title="Okafor Ijeoma Peace" data-transition='slidedown' data-prefetch>
+                           <img src="img/32.jpg" style='margin:10px;'/>
+                          <h2><small>Okafor Ijeoma Peace</small></h2>
+                         <p><small>Asfunizik</small></p>
+                       </a>
+                       <a href='#page32'>Okafor Ijeoma Peace</a>
+                   </li>                                                        
+                   <li>
+                       <a href="#photo" class='anchor' id='img/33.JPG' title="Ugwu Chidera Ikenna" data-transition='slide' data-prefetch>
+                           <img src="img/33.JPG" style='margin:10px;' width='53'/>
+                          <h2><small>Ugwu Chidera Ikenna</small></h2>
+                         <p><small>Hillschidera@Gmail.Com</small></p>
+                       </a>
+                       <a href='#page33'>Ugwu Chidera Ikenna</a>
+                   </li>
+                   
+                   <li>
+                       <a href="#photo" class='anchor' id='img/36.jpg' title="Onyia Nnetochukwu Sochima" data-transition='slide' data-prefetch>
+                           <img src="img/36.jpg" style='margin:10px;'/>
+                          <h2><small>Onyia Nnetochukwu Sochima</small></h2>
+                         <p><small>Nnetochukwup@Gmail.Com</small></p>
+                       </a>
+                       <a href='#page36'>Onyia Nnetochukwu Sochima</a>
+                   </li>
+                                      
+                   <li>
+                       <a href="#photo" class='anchor' id='img/35.jpg' title="Okwuenu Chike Michael" data-transition='slidedown' data-prefetch>
+                           <img src="img/35.jpg" style='margin:10px;'/>
+                          <h2><small>Okwuenu Chike Michael</small></h2>
+                         <p><small>Okwuenumichael@Gmail.Com</small></p>
+                       </a>
+                       <a href='#page35'>Okwuenu Chike Michael</a>
+                   </li>                                                        
+                   
+                   <li>
+                       <a href="#photo" class='anchor' id='img/37.jpg' title="Osimiri Blessing Onyekachi" data-transition='slide' data-prefetch>
+                           <img src="img/37.jpg" style='margin:10px;'/>
+                          <h2><small>Osimiri Blessing Onyekachi</small></h2>
+                         <p><small>Nexyb20004real@Yahoo.Com</small></p>
+                       </a>
+                       <a href='#page37'>Osimiri Blessing Onyekachi</a>
+                   </li>
+                   
+                   
+               </ul>          
+                   
+                            
+           </div>
+           
+           <div data-role="footer" data-position="fixed" style="text-transform: capitalize; text-align: center;">
+               
+               Arrows for Revival<br>
+               <small>ASF UNIZIK <sub>017 set</sub></small>
+              
+           </div>
+           
+            <div data-role="panel" id="left-panel" data-display="overlay" style="text-transform: capitalize; font-family: myfont1; font-size: 14px">
+                <ul data-role="listview">
+                        <li data-icon="back"><a href="#" data-rel="close">Close</a></li>
+                        <li data-icon="mail"><a href="#FYFCordAddress">FYF Cord. Address</a></li>
+                        <li data-icon="info"><a href="#EditorialAddress">Editorial Crew Address</a></li>
+                        <li data-role="collapsible" data-inset="false" data-iconpos="right">
+                            <h3>Goodwill Messages</h3>
+                            <ul data-role="listview" data-theme="a">
+                              <li><a href="#biblestudy">Bible Study Wing</a></li>
+                              <li><a href="#charity">Charity Wing</a></li>
+                              <li><a href="#publicity">Publicity Wing</a></li>                 
+                            </ul>
+                        </li>
+                        <li data-role="collapsible" data-inset="false" data-iconpos="right">
+                            <h3>Articles</h3>
+                            <ul data-role="listview" data-theme="a">
+                              <li><a href="#chisom">Bro. Nwodo Chisom</a></li>
+                              <li><a href="#okwuchukwu">Bro. Okwuchkwu Ojukwu</a></li>
+                              <li><a href="#chidera">Bro. Chidera</a></li>                 
+                            </ul>
+                        </li>                        
+                        <li data-icon="phone"><a href="#about">About</a></li>
+                </ul><br/>
+                <a href="" class="close" data-role="button" data-icon="power" data-iconpos="left" data-mini="true">Exit App</a>
+            </div>  
+
+       
+       </div>
+       
+       <div id="photo" data-role="page" data-fullscreen="true" data-dom-cache="true">
+            <div data-role='header' data-position='fixed'>
+                <a href='' data-rel='back' class='ui-btn ui-btn-left ui-alt-icon ui-nodisc-icon ui-corner-all ui-btn-icon-notext ui-icon-carat-l'>Back</a>
+                
+            </div>
+            
+                      
+            <div data-role="content">
+            <img id='show' src="" width="100%" height="100%"/>
+            </div>            
+           <div  data-role="footer" data-position="fixed" style="text-transform: capitalize; text-align: center;">
+               <p id='theName'></p>
+           </div>
+        </div>
+        
+        
+        <div id="page1" data-role="page">
+            <div data-role='header' data-position='fixed'>
+                <a href='' data-rel='back' class='ui-btn ui-btn-left ui-alt-icon ui-nodisc-icon ui-corner-all ui-btn-icon-notext ui-icon-carat-l'>Back</a>
+                
+            </div>
+            
+                      
+            <div data-role="content" style="font-family:Comic Sans MS;color: #00ffcc; size: 8px; text-align: justify;">
+                <br/> Who does not know Bro. CJ? The organizing wing salutes 
+                you brother. CALM DOWN! He says, by &quot;calm down&quot; he does not mean be lazy because he dislike laziness to the peak, he encourages hard work and diligence, (Even if you are tired of carrying speakers and you see him working, hmm new strength will come). He loves rice eh, he also enjoys listening to music and exercising. He studied in Central School Abba and United Primary school Nkpor-Agu also in Nnamdi Azikiwe Secondary school Abagana. He is a graduate of Educational Management and policy to improve our education standard in this great nation. He lives in umuakuluokulorji village Abba, hails from Njikira L.G.A, Anambra state. I heard those born in May sing well, Bro. CJ enjoys singing (because 18th May is his birthday), to hear him sing you could contact him on 08165696446. He said I should tell you to read , Rev. 3:20 &quot;Behold, I stand at the door, and knock; if any man hear my voice, and open the door, I will come in to him, and will sup with him, and he with me.&quot; E-mail: cjagbata@gmail.com
+
+
+            </div>            
+           <div  data-role="footer" data-position="fixed" style="text-transform: capitalize; text-align: center;">
+               <p><small>AGBATA CHIJIOKE IZUCHUKWU</small></p>
+           </div>
+        </div>
+        
+        <div id="page2" data-role="page">
+            <div data-role='header' data-position='fixed'>
+                <a href='' data-rel='back' class='ui-btn ui-btn-left ui-alt-icon ui-nodisc-icon ui-corner-all ui-btn-icon-notext ui-icon-carat-l'>Back</a>
+                
+            </div>
+            
+                      
+            <div data-role="content" style="font-family:Comic Sans MS;color: #00ffcc; size: 8px; text-align: justify;">
+                <br/>Chioma is a native of Orsu in Imo state. Government Bilingual primary school Bameida Cameroon and City College of commerce markon Cameroon was where she attended her primary and secondary school respectively. This sister loves Eba and Vegetable soup. She abhors being underlooked and can read and sing alot. &quot;A man does not remain the same after learning Gods word; he will either accept it and change or ignore it and die a little&quot;. That was her parting words, her favorite bible verse James 1:12 and 2 Tim 1:7. Chioma was born on the 15th of February and studied Vocational Education at NnamdiAzikwe University Awka. She was a member of the ushering and prayer wing. chiomamuarine@yahoo.com and 08164526891 are ways one can get in contact with this great educationist, but seriously if you are praying about this sister, I think the time to stop that has come, this our gorgeous sister is getting married on 5th April, 2018.
+            </div>            
+           <div  data-role="footer" data-position="fixed" style="text-transform: capitalize; text-align: center;">
+               <p><small>AGBASIMERE CHIOMA MAURINE</small></p>
+           </div>
+        </div>
+        
+        <div id="page3" data-role="page">
+            <div data-role='header' data-position='fixed'>
+                <a href='' data-rel='back' class='ui-btn ui-btn-left ui-alt-icon ui-nodisc-icon ui-corner-all ui-btn-icon-notext ui-icon-carat-l'>Back</a>
+                
+            </div>
+            
+                      
+            <div data-role="content" style="font-family:Comic Sans MS;color: #00ffcc; size: 8px; text-align: justify;">
+                <br/>Our own Engineer! Bro Arinze graduated with First Class from the department of Mechanical engineering. He was a member of the Prayer wing and Evangelism wing in ASF, He served as the FYF Coordinator for Perm. Site. He hails from Awka North, in Anambra state. He concluded his primary school education in International nursery and primary school saminakalere local government kaduna state, and his secondary school in Effective international college Jos and Government secondary school Bwari, Abuja. Every 14th April, he celebrates something special. Bro Arinze enjoys reading, playing football, and swimming. Diligence, Humility, Discipline, and Sincerity are his pillars, while he abhor Indiscipline, lies, laziness and pomposity. Do give him a call on 07066319954, or email: arinze636@gmail.com. To the house he says &quot;Take each step on purpose.&quot; Oya carry your Bible, open to Hebrews 12:2, We do this by keeping our eyes on Jesus the champion who initiates and perfects our faith. Because of the joy awaiting him, he endured the cross, disregarding its shame. Now he is seated in the place of honor beside God&CloseCurlyQuote;s throne
+
+            </div>            
+           <div  data-role="footer" data-position="fixed" style="text-transform: capitalize; text-align: center;">
+               <p><small>CHINWEZE ARINZE EVEREST</small></p>
+           </div>
+        </div>
+        
+        <div id="page4" data-role="page">
+            <div data-role='header' data-position='fixed'>
+                <a href='' data-rel='back' class='ui-btn ui-btn-left ui-alt-icon ui-nodisc-icon ui-corner-all ui-btn-icon-notext ui-icon-carat-l'>Back</a>
+                
+            </div>
+            
+                      
+            <div data-role="content" style="font-family:Comic Sans MS;color: #00ffcc; size: 8px; text-align: justify;">
+                <br/>The best place to find a beautiful woman is among God&CloseCurlyQuote;s children (if you doubt it, come and see her sister Ozioma). She was born 16th of Dec. 199x into the family of Mr and Mrs Udechukwu. She learnt to read and write at the Word of God primary school and furthered her education at Federal Govt. College Ijanikin, Lagos. Her passion to guide people led her to study Guidance and counseling in this great institution. She hails from Idemili North in Anambra state. This beautiful lady loves being creative, she likes faithful and sincere people and abhors injustice. One sure way to put a smile on her face is to give her a plate of breadfruit (ukwa). She was faithful to the charity, publicity and Bible studywings ans served as asst. charity coordinatorpublicity coordinator and charity coordinator. To contact her, visit 17 OlatunjiAyodeji Street, Ijanikin, Lagos or dial 08161816564. You can mail her @ udechukwunenye@yahoo.com or via facebook @ UdechukwuNenye. Brothers, keep praying, if you can buy her the Ukwa, no problem
+            </div>            
+           <div  data-role="footer" data-position="fixed" style="text-transform: capitalize; text-align: center;">
+               <p><small>UDECHUKWU EDITH CHINENYE</small></p>
+           </div>
+        </div>
+        
+        <div id="page5" data-role="page">
+            <div data-role='header' data-position='fixed'>
+                <a href='' data-rel='back' class='ui-btn ui-btn-left ui-alt-icon ui-nodisc-icon ui-corner-all ui-btn-icon-notext ui-icon-carat-l'>Back</a>
+                
+            </div>
+            
+                      
+            <div data-role="content" style="font-family:Comic Sans MS;color: #00ffcc; size: 8px; text-align: justify;">
+                <br/>&quot;Do to others what you want them to do for you &CloseCurlyQuote;&CloseCurlyQuote;, this is the secret of a successful social living. Chukwuchekwa Emmanuel a student of management science, department of accountancy. He resides at block 5 flat 3 NPA QTRS, MARINE BEACH, Apapa, lagos state. He is an indigene of idimaabam in Arochukwulga in Abia state. Born on 11th may he had his primary education in first foundation nursery and primary school, later moved to mavir Leaders College for his secondary education. His favorite food is garri and vegetable soup. Watching football matches, Reading the bible and watching movies are his hobbies. He dislikes pride but likes humility. His favorite bible verse is John 17: 3. Remain in touch with him 08164913646, Facebook: Chukwuchekwa Emmanuel. Email: chukwuchekwaemmanul@gmail .com
+            </div>            
+           <div  data-role="footer" data-position="fixed" style="text-transform: capitalize; text-align: center;">
+               <p><small>CHUKWUCHEKWA EMMANUEL</small></p>
+           </div>
+        </div>
+        
+        <div id="page34" data-role="page">
+            <div data-role='header' data-position='fixed'>
+                <a href='' data-rel='back' class='ui-btn ui-btn-left ui-alt-icon ui-nodisc-icon ui-corner-all ui-btn-icon-notext ui-icon-carat-l'>Back</a>
+                
+            </div>           
+                      
+            <div data-role="content" style="font-family:Comic Sans MS;color: #00ffcc; size: 8px; text-align: justify;">
+                <br/>When the song you are hearing is &quot;Oceans where feet may fail &quot; by Hillsong, please check well, A Pharmacist might have been lost in the realm of worship.<br>
+On the bright day of 26th May 199? A beautiful young damsel was born in the noble family of Ezemokwe. She learnt how to read and write in City Primary School Enugu and to think of her future in command Day Secondary School, Enugu. Her smile is  likened to a flash of lightening. She is very quiet and gentle sister but this does not make her ineffective in what she sets to do. Therefore I introduce to you Pharm. Oluchi, who hails from Aguata L.G.A in Anambra state. She was nurtured and trained in Bible study wing and Prayer wing. You can trust her to stand in the gap for you before God. #Smiling# She does not eat much but when presented with &quot;fio-fio&quot; chia! Your guess is as sure as mine. In her leisure time, she&CloseCurlyQuote;s passionate in listening to Gospel songs and reading. She is not a lazy type and she never boast of her labours for God and the fellowship. Laziness and compromise is her greatest enemy while humility is her style. As a student of God&CloseCurlyQuote;s word, she said &quot;the true meaning of life is found only in Jesus, find Him and when you do, cling to Him and grow in His Grace and Knowledge. Whenever you come across Prov. 3:5-6, remember that&CloseCurlyQuote;s her word for you. Give her a call on 08164295809 or e-mail her on zuluchyy@gmail.com and add her as a friend on Facebook: NzubechiOluchi. If you live around Enugu and its environs, do well to check up on her at Proda Staff Quarters Emene, Enugu State.
+
+            </div>            
+           <div  data-role="footer" data-position="fixed" style="text-transform: capitalize; text-align: center;">
+               <p><small>EZEMOKWE NZUBECHUKWU OLUCHI</small></p>
+           </div>
+        </div>
+        
+        <div id="page7" data-role="page">
+            <div data-role='header' data-position='fixed'>
+                <a href='' data-rel='back' class='ui-btn ui-btn-left ui-alt-icon ui-nodisc-icon ui-corner-all ui-btn-icon-notext ui-icon-carat-l'>Back</a>
+                
+            </div>           
+                      
+            <div data-role="content" style="font-family:Comic Sans MS;color: #00ffcc; size: 8px; text-align: justify;">
+                <br/>A great soldier for the Lord. He was born on 13th of November, he is an origin of Imo state from AmauluMbieriMbaitoli L.G.A. Stanley attended community primary school AmaulyMbieri and Anna Memorial comprehensive secondary school. Breathen this brother loves eating Eba with vegetable soup also like playing football watching movies and travelling. He studied Economics and he dislikes dishonesty and pretence. In the house of ASF Stanley was in the publicity wing and stands for honesty trust and being natural. To know more about this brother just call 07033382920 or Stan_ch2007@Yahoo.com, his Facebook I.D is Stanley DURU. Stanley left the house with these words &quot;DON&CloseCurlyQuote;T BE AFRAID OF FAILURE IN LIFE, IF YOU FALL, FALL FOWARD AND NOT BACKWARDS.&quot; Ephesians 6:10-18 is his favourite bible verse.
+            </div>            
+           <div  data-role="footer" data-position="fixed" style="text-transform: capitalize; text-align: center;">
+               <p><small>DURU STANLEY CHINAZU</small></p>
+           </div>
+        </div>
+        
+        <div id="page8" data-role="page">
+            <div data-role='header' data-position='fixed'>
+                <a href='' data-rel='back' class='ui-btn ui-btn-left ui-alt-icon ui-nodisc-icon ui-corner-all ui-btn-icon-notext ui-icon-carat-l'>Back</a>
+                
+            </div>           
+                      
+            <div data-role="content" style="font-family:Comic Sans MS;color: #00ffcc; size: 8px; text-align: justify;">
+                <br/>If you come to fellowship and you don&CloseCurlyQuote;t see this sister, you better be sure that that day was really a fellowship day, this ever-smiling sister cried her first cry on 27th March 19XX , I heard that she is from Nnewi North located at Anambra state, her name was in the register of Standard nursery and primary school. Lorette Special School and presently in that of UNIZIK where she went to study Pharmacy (don&CloseCurlyQuote;t tell her that I know all these please) She likes singing, sleeping and site-seeing. But a well- prepared vegetable soup can make her take a break from all these. If you&CloseCurlyQuote;re a fake person kindly keep-off because she dislikes fake person (Sister how do you know the real ones?). She was the Asst. Fin. Sec. and a member of the prayer wing. If you are good looking well dressed and you don&CloseCurlyQuote;t pretend she will like you. She is telling the house &quot;Don&CloseCurlyQuote;t be afraid he&CloseCurlyQuote;s merciful&quot;. Please turn your bible to Phil. 4:13. Want to know more? Call 07033024570. E-mail: gemmystic2@gmail.com . Facebook: GEM MYSTIC or visit; Plot R11 Govt. House, Awka.
+            </div>            
+           <div  data-role="footer" data-position="fixed" style="text-transform: capitalize; text-align: center;">
+               <p><small>CHIKWENDU CHINWENDU</small></p>
+           </div>
+        </div>
+        
+        <div id="page9" data-role="page">
+            <div data-role='header' data-position='fixed'>
+                <a href='' data-rel='back' class='ui-btn ui-btn-left ui-alt-icon ui-nodisc-icon ui-corner-all ui-btn-icon-notext ui-icon-carat-l'>Back</a>
+                
+            </div>           
+                      
+            <div data-role="content" style="font-family:Comic Sans MS;color: #00ffcc; size: 8px; text-align: justify;">
+                <br/>The light-skinned handsome young man was born 5 days before Christmas. A native of Alor, Idemili South local government of Anambra state he was born and bred in Anambra state. He first attended Mercil Special Nur./pri. School Nkpor after which he progressed to Bishop Crowther Seminary Awka. A graduate of Electrical Engineering, I hope he can help us have steady electricity in this country in the coming years. This son of God likes reading and exploiting good opportunities. He likes honesty but dishonesty people are advised to stay clear and his favourite verse of the Bible is 1 Thess. 4:11-12. To attract his favour I think the surest route is through a well prepared Abacha(African Salad). If you wish to relate with him you can do that via facebook @ EchezonaNweze, via email, echezona4christ@gmail.com or just dial 07061658719. To see him in person you can visit 19 Nice Choice str. Enekwasumpu, Obosi. He leaves these words for the brethren &quot;Deep in His love forever&quot;.
+            </div>            
+           <div  data-role="footer" data-position="fixed" style="text-transform: capitalize; text-align: center;">
+               <p><small>ECHEZONA NWEZE</small></p>
+           </div>
+        </div>
+        
+        <div id="page10" data-role="page">
+            <div data-role='header' data-position='fixed'>
+                <a href='' data-rel='back' class='ui-btn ui-btn-left ui-alt-icon ui-nodisc-icon ui-corner-all ui-btn-icon-notext ui-icon-carat-l'>Back</a>
+                
+            </div>           
+                      
+            <div data-role="content" style="font-family:Comic Sans MS;color: #00ffcc; size: 8px; text-align: justify;">
+                <br/>On the 20th of August 199x the family of Ifebigh welcomed a pretty damsel from above. She hails from Aguata in Anambra state. She attended Marywood primary school and then Marywood grammar school, both at Franklin road, Apapa Lagos.  She enjoys reading, singing, praying and teaching. She likes honesty and hardwork and dislikes lazyness. Her stomach rejoices at the arrival of yam. She is a graduate of the department of public administration and was a committed member of the Drama wing of ASF. One Bible verse she&CloseCurlyQuote;ll never forget is Ex. 14:14. You can contact her via Facebook @ IfebighChisom or send her an e-mail via ifebighc@gmail.com. You can also visit 4 AdaramajaIwayaYaba, Lagos or dial 08063326601. She leaves us with these words &quot;it is good to start well but better to finish well, trusting in God.
+            </div>            
+           <div  data-role="footer" data-position="fixed" style="text-transform: capitalize; text-align: center;">
+               <p><small>IFEBIGH CHINAZOR CHISOM</small></p>
+           </div>
+        </div>
+        
+        <div id="page11" data-role="page">
+            <div data-role='header' data-position='fixed'>
+                <a href='' data-rel='back' class='ui-btn ui-btn-left ui-alt-icon ui-nodisc-icon ui-corner-all ui-btn-icon-notext ui-icon-carat-l'>Back</a>
+                
+            </div>           
+                      
+            <div data-role="content" style="font-family:Comic Sans MS;color: #00ffcc; size: 8px; text-align: justify;">
+                <br/>Our great Mathematician &quot;Mike&quot;, he is a son of the soil from Anaocha L.G.A, in Anambra state. He is a faithful bible study wing member, little wonder he thoroughly dislikes vulgar talks, heresies and hypocrisy; He can contribute eh hmm, that&CloseCurlyQuote;s why he enjoys listening to Gospel messages, singing, and discussing Christ, apart from voraciously consuming the word, he enjoys playing PES (video game). He was welcomed to earth on the 7th day of May. Ultimate Science school, Suleja, Niger state and St. Mary&CloseCurlyQuote;s Catholic College, Suleja, were his training grounds; being a pure Anaocha man he is very delighted to have to have Ukwa and fio-fio served to him any day any time. &quot;Nothing is as sweet as being in Christ, as joyous as knowing Him and knowing Him and knowing He knows and lovesyou.&quot; With these words he encourages us to desire more of God, even as we read through: Prov. 4:18, Isa. 40:31, Col. 1:9-12. For more clarity contact him on 08138848176.
+                    E-mail :michealenechi@gmail.com
+
+            </div>            
+           <div  data-role="footer" data-position="fixed" style="text-transform: capitalize; text-align: center;">
+               <p><small>ENECHI CHIJIOKE MICHAEL</small></p>
+           </div>
+        </div>
+        
+        <div id="page12" data-role="page">
+            <div data-role='header' data-position='fixed'>
+                <a href='' data-rel='back' class='ui-btn ui-btn-left ui-alt-icon ui-nodisc-icon ui-corner-all ui-btn-icon-notext ui-icon-carat-l'>Back</a>
+                
+            </div>           
+                      
+            <div data-role="content" style="font-family:Comic Sans MS;color: #00ffcc; size: 8px; text-align: justify;">
+                <br/>I can recall when I first saw this sister at ASF National Conference at All Saints Cathedral Onitsha, then she was a student of pre-science (she was reading her textbook with (i guess) sister Hope Okelue inside the church) little did I know that she will grow up to become a mother in this house (vex if you want). She served this great house in different capacities (Mbaukwu Follow-up cord, Branch Secretary and Chapter Sisters cord.); she lives with her parents in Mgbafulike street Jeddo Warri, Delta state, let your heart not be bothered she is from Anaocha LGA, Anambra state. She is a graduate of the department of Zoology. Before then she schooled in Avweke nursery/ primary school, Abraka, and wrote her JAMB in Our Lady&CloseCurlyQuote;s special science school Nnobi. On the 18th day of the first month of the year, make sure you get a well prepared plate of white rice, stew, with fried chicken and Sprite (chilled one o!) â€¦ This should be the first gift before any other on her birthday. She&CloseCurlyQuote;s a member of the Bible study wing; she also enjoys singing, praying and listening to songs and loathe gossip, dishonesty and deceit, so check your life sir, are you Honest and true? If yes then pray well before dialing 07032265995. &quot;Wherefore gird up the loins of your mind, be sober and hope to the end for the grace that is brought into you at the revelation of Christ&quot;, that&CloseCurlyQuote;s not all from her o, make sure you read I Peter 2:2. Send her a friend request on Facebook: NenyeJoysmart. Email: nenyejoysmart@gmail.com. 
+
+            </div>            
+           <div  data-role="footer" data-position="fixed" style="text-transform: capitalize; text-align: center;">
+               <p><small>EJIKEME CHINENYE DIVINE HOPE </small></p>
+           </div>
+        </div>
+        
+        <div id="page13" data-role="page">
+            <div data-role='header' data-position='fixed'>
+                <a href='' data-rel='back' class='ui-btn ui-btn-left ui-alt-icon ui-nodisc-icon ui-corner-all ui-btn-icon-notext ui-icon-carat-l'>Back</a>
+                
+            </div>           
+                      
+            <div data-role="content" style="font-family:Comic Sans MS;color: #00ffcc; size: 8px; text-align: justify;">
+                <br/>When you hear someone singing &quot;Guiding me safely&quot; by Gwamma, look well it might be this koinonia brother of mine. Somewhere in Lagos Nigeria on the 29th of Jan. 199x a baby was born into the Enemchukwu Family. Named Chidiebere (The Lord is merciful), the mercy of the Lord carried through primary education at Grandmates Nursery and Primary school Isolo, led him through Babington Macaulay Junior Seminary Ikorodu both in Lagos, after which he came down to the east to study Economics. This young man who hails from Idemili south in Anambra state was careful not to forsake the Lord&CloseCurlyQuote;s mercy hence he joined the fellowship to be groomed in the Lord. He was committed to the prayer and Bible study wings of the fellowship and was granted grace to serve as the Vice president and then branch president of the fellowship. Oh! He loves FAFing, thinking and remaining in the Lord&CloseCurlyQuote;s presence. He likes sincerity and humility and dislikes deceit, pretense and pride. One Bible verse that strikes him the most is Acts 2:28. As for food, just give any well prepared one. If you want to be discipled by him you can reach him via Facebook @ EnemchukwuChidi or via enemchukwu@gmail.com or just dial 08167661447 but if you insist on seeing him you can visit No. 7 Ofozie crescent JakandeOke-AfaIsolo Lagos. His words for the fellowship are &quot;Pls brethren wherever you find yourself or whatever you find yourself doing please let&CloseCurlyQuote;s seek to enthrone Christ and present Christ to Men. Find God&CloseCurlyQuote;s purpose for your life and you will never struggle or compete with anyone&quot;.
+            </div>            
+           <div  data-role="footer" data-position="fixed" style="text-transform: capitalize; text-align: center;">
+               <p><small>ENEMCHUKWU CHIDIEBERE</small></p>
+           </div>
+        </div>
+        <div id="page14" data-role="page">
+            <div data-role='header' data-position='fixed'>
+                <a href='' data-rel='back' class='ui-btn ui-btn-left ui-alt-icon ui-nodisc-icon ui-corner-all ui-btn-icon-notext ui-icon-carat-l'>Back</a>
+                
+            </div>           
+                      
+            <div data-role="content" style="font-family:Comic Sans MS;color: #00ffcc; size: 8px; text-align: justify;">
+                <br/>Next is our sister who has the heart of a Mother; this caring sister is a member of the Bible study and publicity wings, she is a graduate of Fine and Applied arts, with specific interest in the area of textile design. Dinma was born on the 16th of December, and lives with her parents at No. 32 IgweOrizu Road OkpunoOtoloNnewi, in Anambra state, though she is an indigene of Oji River L.G.A. in Enugu state. She played with her friends in Kings Nursery and Primary school, D.C.C. NkwoNnewi and wrote her WASSCE in Maria Regina Model comprehensive school Nnewi in Anambra. Outside of the Art studio, the next thing you&CloseCurlyQuote;ll find her doing is either reading or singing. The love for righteousness has consumed her, so she hates any form of unrighteousness. You could always call her on 08133085859. To the house she says &quot;For me to live is Christ&quot;, with her Life changing text seen in Phil. 4:13.
+                        Facebook: Chimma Louis.   email: Dmeekangelonline@gmail.com
+
+            </div>            
+           <div  data-role="footer" data-position="fixed" style="text-transform: capitalize; text-align: center;">
+               <p><small>IBEZIM CHIDIMMA ONYINYE</small></p>
+           </div>
+        </div>
+        
+        <div id="page15" data-role="page">
+            <div data-role='header' data-position='fixed'>
+                <a href='' data-rel='back' class='ui-btn ui-btn-left ui-alt-icon ui-nodisc-icon ui-corner-all ui-btn-icon-notext ui-icon-carat-l'>Back</a>
+                
+            </div>           
+                      
+            <div data-role="content" style="font-family:Comic Sans MS;color: #00ffcc; size: 8px; text-align: justify;">
+                <br/>No record
+            </div>            
+           <div  data-role="footer" data-position="fixed" style="text-transform: capitalize; text-align: center;">
+               <p><small>EZIKE ARINZE</small></p>
+           </div>
+        </div>
+        
+        <div id="page16" data-role="page">
+            <div data-role='header' data-position='fixed'>
+                <a href='' data-rel='back' class='ui-btn ui-btn-left ui-alt-icon ui-nodisc-icon ui-corner-all ui-btn-icon-notext ui-icon-carat-l'>Back</a>
+                
+            </div>           
+                      
+            <div data-role="content" style="font-family:Comic Sans MS;color: #00ffcc; size: 8px; text-align: justify;">
+                <br/>Ikezuagu Blessing Chidimma is a name you wouldn&CloseCurlyQuote;t want to forget in a hurry. She cried her first on the 27th February to the family of Ikezuagu from Anoacha in Anambra state. She attended Township Primary school, Eastern Academy and loretto special science secondary school, she stays with her parents at No. 4 Umuchu street fegge Onitsha. She likes singing to Gods glory and teaching. Humility, Calmness and sincerity remains her likes while she dislikes frivolities, over-sleeping. When it comes to food any carefully Prepared Igbo Dish will do. She was a member of bible study wing and one time coordinator of prayer wing. She is passionate about the things of God and hardly misses any meeting of the brethren. Her favorite verse is Eccl 12:13(That&CloseCurlyQuote;s the whole story. Here now is my final conclusion: Fear God and obey his commandments, for this is everyone&CloseCurlyQuote;s duty.). She studied Pure and industrial Chemistry (where she graduated with First Class). For more info about this beloved daughter of zion call 08160648814 or email her using BlessingChidimma@12gmail.com . Her parting words are &quot;Just keep drawing closer to God, by clinging to God&CloseCurlyQuote;&CloseCurlyQuote;.
+            </div>            
+           <div  data-role="footer" data-position="fixed" style="text-transform: capitalize; text-align: center;">
+               <p><small>IKEZUAGU BLESSING CHIDIMMA</small></p>
+           </div>
+        </div>
+        
+        <div id="page17" data-role="page">
+            <div data-role='header' data-position='fixed'>
+                <a href='' data-rel='back' class='ui-btn ui-btn-left ui-alt-icon ui-nodisc-icon ui-corner-all ui-btn-icon-notext ui-icon-carat-l'>Back</a>
+                
+            </div>           
+                      
+            <div data-role="content" style="font-family:Comic Sans MS;color: #00ffcc; size: 8px; text-align: justify;">
+                <br/>This our Handsome, sport loving, cheerful hearted Chinese brother was born on the 22nd July 199W, he hails from Oji River, Enugu state. Played ball in God&CloseCurlyQuote;swill nursery and primary school Emene Enugu state, also wrote JAMB in St. Joseph&CloseCurlyQuote;s Secondary school Emene Enugu state (nawa o â€¦ Enugu state, Enugu state, Enugu state). Also resides in Enugu, No. 10b Maku Street Emene- Enugu. He enjoys playing football, Basketball, table tennis but if you want him to dunk during a basketball game, give him Beans and plantain or milk and bread. (This brother does not joke with bread and coke o). He served as the Chief Usher and assit. O.G.S temp site sub-branch His warm smile is a requirement for every ushering wing member, oh yes and Choral wing. Bro Mike finished from Religion and Human Relations Department and is currently doing his masters in China. 08182532607 (save to SIM 1), on Facebook he goes by the name Michael Harford. Or email mikeharford722@yahoo.com.To the house he says &quot;No matter what, God is still the best&quot;. From the testimony of Brother Job, I agree. Job 32:8.
+            </div>            
+           <div  data-role="footer" data-position="fixed" style="text-transform: capitalize; text-align: center;">
+               <p><small>HARFORD MICHAEL KENECHUKWU</small></p>
+           </div>
+        </div>
+        
+        <div id="page18" data-role="page">
+            <div data-role='header' data-position='fixed'>
+                <a href='' data-rel='back' class='ui-btn ui-btn-left ui-alt-icon ui-nodisc-icon ui-corner-all ui-btn-icon-notext ui-icon-carat-l'>Back</a>
+                
+            </div>           
+                      
+            <div data-role="content" style="font-family:Comic Sans MS;color: #00ffcc; size: 8px; text-align: justify;">
+                <br/>I must talk o, if you are owning the house of ASF and see her coming please run for your life, Nicknamed &quot;Fidelity&quot;, not as the Bank o! but a personification of the word, she is trust-worthy in every ramification. she served the house as the Branch Financial Secretary (being a fin-sec in ASF is not easy o, u can ask bro Joelson, during excos meeting if 5naira is missing, u will tell us where it travelled to) This lovely sister reminds the house to :&quot;Remember now your creator in the days of your youth&quot;. Molded in the prayer and evangelism wings in ASF, she looks upon pride with strong allergy, but she finds humility and self-control irresistible; she was welcomed lovingly into her family on the 26th February. Being from Awka South, in Anambra (so she goes anytime and eat well); she did well in her &quot;quantitative reasoning&quot; in Ezinwankwo Comm. Primary school Nibo, also finished WASSCE in Federal Govt. College Nise. Be sure to get the best from our latest food science and Technnlogist. Her favourite meal is Bread fruit (you know it na, if not call her again ask her); cooking and reading are very much what she enjoys doing. OK pick up your Bible and open to John 15:16.For more info about this beloved daughter of Zion you reach on 08168874677, On Facebook she is Miriam Chiamaka. Her email is mirchindibe@gmail.com
+            </div>            
+           <div  data-role="footer" data-position="fixed" style="text-transform: capitalize; text-align: center;">
+               <p><small>NDIBE CHIAMAKA MIRIAM</small></p>
+           </div>
+        </div>
+        
+        <div id="page19" data-role="page">
+            <div data-role='header' data-position='fixed'>
+                <a href='' data-rel='back' class='ui-btn ui-btn-left ui-alt-icon ui-nodisc-icon ui-corner-all ui-btn-icon-notext ui-icon-carat-l'>Back</a>
+                
+            </div>           
+                      
+            <div data-role="content" style="font-family:Comic Sans MS;color: #00ffcc; size: 8px; text-align: justify;">
+                <br/>Once someone begins to dish out trouble  in breakable plate for Sis Blessing Osimili, you don&CloseCurlyQuote;t  have to think twice, it&CloseCurlyQuote;s Bro Ifeanyi. This handsome young man of God is a member of ogbonna family (and equally the Koinonia Family) he is from Ebonyi state. Born 26th of November he spent his earlier years in northern Nigeria, he schooled at Federal Staff Primary School Sokoto and Federal Govt. College, Sokoto. He loves to pray as well as watch football matches, he likes being in God&CloseCurlyQuote;s presence and dislikes pretence. Evang. Ifeanyi was a member of the evangelism wing and served as the wing coordinator before also serving as the brothers coordinator/Vice President of the fellowship. Seems sister blessing said he eats indomie and gala a lot(i no follow oo), His favourite Bible verses are Isaiah 40:29-31. Want to reach him? Just dial 08060220620 or email @ emmaify56@yahoo.com you can also reach him on Facebook via IfeanyiAjah. To see him in person you can visit 11, Zagga road GahoNama, Sokoto state. His words for the brethren are &quot;Finally brethren be strong in the lord and in the power of his might&quot;.
+            </div>            
+           <div  data-role="footer" data-position="fixed" style="text-transform: capitalize; text-align: center;">
+               <p><small>OGBONNA IFEANYI</small></p>
+           </div>
+        </div>
+        
+        <div id="page20" data-role="page">
+            <div data-role='header' data-position='fixed'>
+                <a href='' data-rel='back' class='ui-btn ui-btn-left ui-alt-icon ui-nodisc-icon ui-corner-all ui-btn-icon-notext ui-icon-carat-l'>Back</a>
+                
+            </div>           
+                      
+            <div data-role="content" style="font-family:Comic Sans MS;color: #00ffcc; size: 8px; text-align: justify;">
+                <br/>Please, brothers you can now stop fasting on this sisters head, sincerely, you are not making progress, she is getting married on the 7th of April 2018.
+Nnedimma was delivered as one precious package from God to the family of Ezebialu on the 3rd of June (on that year, you know na) she had her nails checked in Unizik primary school, then she also played sports in Federal Girl&CloseCurlyQuote;s Government college Ezzamgbo, Ebonyi. She is a pure native of Dunukofia Local Govt. Area of Anambra state, a graduate of Forestry and Wildlife Management. Don&CloseCurlyQuote;t bother trying to get to her with food, because any well prepared food is welcomed by her, and of course will you cook better than a clef? Cooking and reading are her hobbies. She loves honesty and doesn&CloseCurlyQuote;t see eye-to-eye with lies. She was a member of the Bible study wing, to the house she says &quot;It pays to serve God as a youth&quot;. Take your time to call her on 07039635230. What does Isaiah 40:31 say? Facebook: EzebialuNnedimma. Email: ezebialunnedimma@gmail.com
+
+            </div>            
+           <div  data-role="footer" data-position="fixed" style="text-transform: capitalize; text-align: center;">
+               <p><small>EZEBIALU NNEDIMMA NONYELUM</small></p>
+           </div>
+        </div>
+        
+        <div id="page21" data-role="page">
+            <div data-role='header' data-position='fixed'>
+                <a href='' data-rel='back' class='ui-btn ui-btn-left ui-alt-icon ui-nodisc-icon ui-corner-all ui-btn-icon-notext ui-icon-carat-l'>Back</a>
+                
+            </div>           
+                      
+            <div data-role="content" style="font-family:Comic Sans MS;color: #00ffcc; size: 8px; text-align: justify;">
+                <br/>Beloved, please if you don&CloseCurlyQuote;t know how to share burden and you see this brother coming, please enter keke and cross over to the other side, or better off refer him to the Alumnia chairman(Bro Kingsely Mbanu). When he starts talking bible what he will say does not know how to finish, it is only time that will finish. Bro Jo abeg learn how to talk football jor<br>
+&quot;Remain the custodian of the word of God like Ezra. Consume it voraciously and you will be alright&quot; (be a scroll-eater), these are the parting words of MadunemeJoelsonChinedu born on 2nd June. He studied Educational foundation (political science option).He attended Idaw River and Igbariam Primary school and Union Sec. Awkunanaw and Victory High school. He is an indigene of Oji River in Enugu state while he currently resides in Ubaha-Awlaw. Bro Joelson loves meticulously prepared beans with any combination (including bread, rice, yam, spaghetti, sweet potatoes and others). Playing Football, Singing and most importantly &quot;Sharing Burden&quot; are his hobbies no wonder he loves this family of God. He likes Humility, Diligence and Excellence while Hypocrisy, Laziness and Timidity remains his dislikes, so my dear if you have any of those habits, just keep your distance. He is a member of Bible Study wing, Drama and OGS and by God&CloseCurlyQuote;s grace he was one time branch and Chapter president. He is dedicated to the things of God and hopes to be a better custodian of the word. His favourite bible is verse Phil 2:13(For it is God which worketh in you both to will and to do of his good pleasure). Call him on 08130526934, 07086521500. FACEBOOK: MadunemeJoelsonChinedu. email:joelsonchinedu@gmail.com
+
+            </div>            
+           <div  data-role="footer" data-position="fixed" style="text-transform: capitalize; text-align: center;">
+               <p><small>MADUNEME JOELSON CHINEDU</small></p>
+           </div>
+        </div>
+        
+        <div id="page22" data-role="page">
+            <div data-role='header' data-position='fixed'>
+                <a href='' data-rel='back' class='ui-btn ui-btn-left ui-alt-icon ui-nodisc-icon ui-corner-all ui-btn-icon-notext ui-icon-carat-l'>Back</a>
+                
+            </div>           
+                      
+            <div data-role="content" style="font-family:Comic Sans MS;color: #00ffcc; size: 8px; text-align: justify;">
+                <br/>On the 11th of November in the year of our lord a child was born to the family of Nwoko in Isiala-Ngwa North, Abiastste. This child grew and attended NnamdiAzikiwe University where she studied Guidance and Counseling but before then she attended Hope nursery and primary school Nkpor and Girls secondary school Onitsha. When it comes to eating of jollof rice and beans uchechi is an expert. Reading, listening to music and surfing the internet are what she enjoys doing. She hates disappointment and dishonesty. Uchechi was in the choral and prayer wing during her stay with us. Honesty and humility are what she likes. ucheomareal@gmail.com that&CloseCurlyQuote;s her e-mail on Facebook she is none other than NwokoUchechi. Uchechi left the house with these words &quot;Be yourself never wish to be someone else, but always look to God&quot;. Her favorite bible verse is matt. 6:33
+            </div>            
+           <div  data-role="footer" data-position="fixed" style="text-transform: capitalize; text-align: center;">
+               <p><small>NWOKO UCHECHI CHINYERE</small></p>
+           </div>
+        </div>
+        
+        <div id="page23" data-role="page">
+            <div data-role='header' data-position='fixed'>
+                <a href='' data-rel='back' class='ui-btn ui-btn-left ui-alt-icon ui-nodisc-icon ui-corner-all ui-btn-icon-notext ui-icon-carat-l'>Back</a>
+                
+            </div>           
+                      
+            <div data-role="content" style="font-family:Comic Sans MS;color: #00ffcc; size: 8px; text-align: justify;">
+                <br/>&quot;There is time for everything.&quot; Says our brother, he is either discussing, travelling or drawing, or even eating his favourite bread and tea, or beans. What can I say the brother resides in G.R.A. Buhari Estate, Gombe state, though he is an indigene of Orlu L.G.A. in Imo state.Born on the glorious day of March 7th, he attended Pace-Setter&CloseCurlyQuote;s nursery and primary school Gombe and St. Luke&CloseCurlyQuote;s College Jos. From these schools he leant to love sincerity and trust and to hate hypocrisy. You can contact our Architect on 08065428426. His favourite Bible verse Ecc. 8:11, &quot;Because sentence against an evil work is not executed speedily, therefore the heart of the sons of men is fully set in them to do evil.&quot; (Imagine if you&CloseCurlyQuote;d go blind any day you lust with your eye? The world would be heavenly). Anyway, when you&CloseCurlyQuote;re not busy reach him on:
+                    Facebook: Crispus Silas.      E-mail: kcrispus54@gmail.com
+
+            </div>            
+           <div  data-role="footer" data-position="fixed" style="text-transform: capitalize; text-align: center;">
+               <p><small>NDUKUBA CRISPUS EBUBE</small></p>
+           </div>
+        </div>
+        
+        <div id="page24" data-role="page">
+            <div data-role='header' data-position='fixed'>
+                <a href='' data-rel='back' class='ui-btn ui-btn-left ui-alt-icon ui-nodisc-icon ui-corner-all ui-btn-icon-notext ui-icon-carat-l'>Back</a>
+                
+            </div>           
+                      
+            <div data-role="content" style="font-family:Comic Sans MS;color: #00ffcc; size: 8px; text-align: justify;">
+                <br/>On the 21th December the family of Oguejiofor received a wonderful gift from God, a beautiful baby girl. She started her academic life in Tender Touch Nursery and Primary School Awka and was admitted into Holy Innocent Juniorateconvenant Secondary School in Nkpor. This lady is nice, humble and a great Mircobiologist. She loves singing, reading and watching movies. I know you&CloseCurlyQuote;ve been looking forward to whom this wonderful lady is, not to worry. To brothers she is single and you&CloseCurlyQuote;ll win her heart by been honest. Any well prepared food is her favourite. &quot;Fear God and keep His Commandments for the fear of God is the beginning of wisdom&quot;, this is her parting words to you. You can reach her on 08166292011 or send a message on g-mail at idejindum@gmail.com. You can as well visit her profile on Facebook with OGUEJIOFOR OLUCHUKWU. Never forget to say hello to her in No. 5 Udeozor Street Umuzocha village Awka, in case you are from Oji river L.G.A Enugu State also do well to identify with her.
+            </div>            
+           <div  data-role="footer" data-position="fixed" style="text-transform: capitalize; text-align: center;">
+               <p><small>OGUEJIOFOR OLUCHUKWU CHISOM</small></p>
+           </div>
+        </div>
+        
+        <div id="page25" data-role="page">
+            <div data-role='header' data-position='fixed'>
+                <a href='' data-rel='back' class='ui-btn ui-btn-left ui-alt-icon ui-nodisc-icon ui-corner-all ui-btn-icon-notext ui-icon-carat-l'>Back</a>
+                
+            </div>           
+                      
+            <div data-role="content" style="font-family:Comic Sans MS;color: #00ffcc; size: 8px; text-align: justify;">
+                <br/>Our brother here is a graduate of Quantity Surveying, before he spent 5 years here, he spent 6 years in Metropolitan senior college and others, and made sand houses in Tender touch Nursery and Primary school, Festar. A new indigene was added to Awka South L.G.A. on the 1st of July. To put this brother in a good mood, just play the movies: War room, God&CloseCurlyQuote;s not dead, or Do you Believe! (any good Christian Movie) or raise a song that he could join and sing (though he was never in choral wing). He is constantly on the move, so in order to catch him use 07035123324 or 07012572006. He&CloseCurlyQuote;s desire for us is that we &quot;Be lost in Him&quot;. Amen. &quot; And this is eternal life that they may know the only true God and Jesus Christ whom he has sent&quot; John 17:3. Search for KELVIN IKE NWORGU on Facebook or e-mail nworguikemefuna6@gmail.com
+            </div>            
+           <div  data-role="footer" data-position="fixed" style="text-transform: capitalize; text-align: center;">
+               <p><small>NWORGU IKEMEFUNA KELVIN</small></p>
+           </div>
+        </div>
+        
+        <div id="page26" data-role="page">
+            <div data-role='header' data-position='fixed'>
+                <a href='' data-rel='back' class='ui-btn ui-btn-left ui-alt-icon ui-nodisc-icon ui-corner-all ui-btn-icon-notext ui-icon-carat-l'>Back</a>
+                
+            </div>           
+                      
+            <div data-role="content" style="font-family:Comic Sans MS;color: #00ffcc; size: 8px; text-align: justify;">
+                <br/>Some ASF brethren at tempsite will rarely forget Female Villa hostel (the hostel of brethren), one of the reasons being the presence of this sister, if you are hungry and you are close to Female Villa, you have hope. if you are going to UNIZIK bus stand without transport money, once you see Female Villa hostel begin to laugh at the devil. <br>23rd of August, a day that brought smile to the faces of the members of Ojukwu family because it marks the birth of a proper child, a gift from God. She started academics at Holy Child Convent Amichi and proceeded to St. Monica&CloseCurlyQuote;s College, Ogbunike. She hails from Ekwusigo, Anambra state. This beautiful daughter of Zion is a co-operative Economist. Heaven enjoys hearing her sing and gave her the privilege to serve as assistant choral/drama co-coordinator but before that assistant Charity coordinator, she is also in prayer wing (if she blast in tongues here). She loves to study not just academic books but also the scriptures. Whenever she enters the spirit realm only the aroma of Banga soup is capable of bringing her back suddenly. To be her friend you have to be a sincere person and whenever you study the Bible and go through Ecc. 12 vs 13 just remember her cause it&CloseCurlyQuote;s her favourite verse. ASF to the core she was dedicated to the Choral, Drama, Charity and Ushering wings of the fellowship. You can reach her by calling 08146552952, on Facebook @ ChisomOjukwu, and her email address ojukwuchisomann@gmail.com. She stays at Oraifite for those that want to visit to see her in person. She leaves this house with these words: &quot;God is faithful only follow him step by step and he will fulfill every of his promises in your life&quot;.
+            </div>            
+           <div  data-role="footer" data-position="fixed" style="text-transform: capitalize; text-align: center;">
+               <p><small>OJUKWU CHISOM ANN</small></p>
+           </div>
+        </div>
+        
+        <div id="page27" data-role="page">
+            <div data-role='header' data-position='fixed'>
+                <a href='' data-rel='back' class='ui-btn ui-btn-left ui-alt-icon ui-nodisc-icon ui-corner-all ui-btn-icon-notext ui-icon-carat-l'>Back</a>
+                
+            </div>           
+                      
+            <div data-role="content" style="font-family:Comic Sans MS;color: #00ffcc; size: 8px; text-align: justify;">
+                <br/>Attention people of God let me introduce this brother. Ok his name is Ogboso Reuben born on the 4th of October. Bro Reuben is a great biochemist from Ebem, Ohafia LGA in Abia State. He attended Command children school Kaduna and then St Anthony secondary school Ohafia. He was once the V.P and brothers coordinator of perm site, Chapter president and he is the FYF coordinator for &quot;ARROWS FOR REVIVAL&quot;.He likes playing football and enjoys eating beans and yam; groundnut and bread. Bro Reuben loves to see that things are done well and he dislikes insincerity. On Facebook he is OGBOSO REUBEN his e-mail ogbosoreuben@gmail.com and his mobile is 07066574746 Reuben was an active member of the prayer and bible study wing.&quot;DON&CloseCurlyQuote;T LEAVE UNIZIK WITHOUT CATCHING CHRIST&quot; were his parting words to the house. Isaiah 49:24-25 are his favourite bible verses.
+            </div>            
+           <div  data-role="footer" data-position="fixed" style="text-transform: capitalize; text-align: center;">
+               <p><small>OGBOSO REUBEN</small></p>
+           </div>
+        </div>
+        
+        <div id="page28" data-role="page">
+            <div data-role='header' data-position='fixed'>
+                <a href='' data-rel='back' class='ui-btn ui-btn-left ui-alt-icon ui-nodisc-icon ui-corner-all ui-btn-icon-notext ui-icon-carat-l'>Back</a>
+                
+            </div>           
+                      
+            <div data-role="content" style="font-family:Comic Sans MS;color: #00ffcc; size: 8px; text-align: justify;">
+                <br/>A new family member joined the house of Ojukwu on the 3rd of June, our dear sister is a native of Idemili South, in Anambra state. St. Peter Anglican Church, Jebba and U.M.C.A comprehensive high school Jebba were her alma mater. She doesn&CloseCurlyQuote;t enjoy idleness, in any free time she gets she is either reading novels or listening to music. A good time to see her is when she&CloseCurlyQuote;s eating her favourite meal Rice and beans. Whatever thing is honest and true is what she loves and associates herself with but anything else she frowns at it. She is a graduate of the department of Science Education, she also belonged to the Ushering wing in this great house. It would be good to hold this number but hear clearly from &quot;Him&quot; before you dial it (For brother) 07060652194. She leaves us with the words: &quot; Jesus is the way , look unto Him and He will never disappoint you&quot; , that&CloseCurlyQuote;s why Phil. 4:13 is her favourite verse in the Bible. Get in touch with her.Facebook: IfeomaOjukwu. e-mail: adaorakrea1134@gmail.com
+            </div>            
+           <div  data-role="footer" data-position="fixed" style="text-transform: capitalize; text-align: center;">
+               <p><small>OJUKWU IFEOMA JOYCE</small></p>
+           </div>
+        </div>
+        
+        <div id="page29" data-role="page">
+            <div data-role='header' data-position='fixed'>
+                <a href='' data-rel='back' class='ui-btn ui-btn-left ui-alt-icon ui-nodisc-icon ui-corner-all ui-btn-icon-notext ui-icon-carat-l'>Back</a>
+                
+            </div>           
+                      
+            <div data-role="content" style="font-family:Comic Sans MS;color: #00ffcc; size: 8px; text-align: justify;">
+                <br/>When you begin to hear &quot;Academics gi kwan? Quiet time kwan? foodstuff kwan?&quot;, then it has to be Bro. Chijioke. if this brother decides to follow-you up, you are in trouble because he doesn&CloseCurlyQuote;t accept &quot;we thank God&quot; for an answer, he will want to see your result with his eyes.<br>
+            Brother Chijioke has served this great house of ASF on several platforms (Asst. Evang/Follow-up Cord, Asst. Prayer Cord, two times Vice president, L.O.C chairman for Chapter Conference and FyF Cordinator Tempsite sub-branch). From Idemili South, an epitome of excellence, competence, good works and of course, possesses a Godly character. He is a personality you are not in a hurry to forget. So just copy the phone number down 07037381011. He was a member of Prayer, Bible study, Evangelism and Follow up (don&CloseCurlyQuote;t ask me how he did it). Bro Chijioke is a graduate from the department of Computer Science. He enjoyed akara and bread in All Saint&CloseCurlyQuote;s Primary school, Onitsha. Before he proceeded to write his WASSCE inDennis Memorial Grammar School Onitsha (DMGS). Happy is he when he is served Eba and Egusi soup. He&CloseCurlyQuote;s hobbies includes Programming, Teaching and learning new things and surly he doesn&CloseCurlyQuote;t delight in ungodly character and frowns deeply at mediocrity. His home address is 22 Uke street Omagba, Onitsha. While 22nd August remains his birthday. &quot;Beloved, beware of the enemy called &CloseCurlyQuote;Average&CloseCurlyQuote; in whatever you are doing, be it in your pursuit for God or in your Academics. Always be tired of the status quo.&quot; Also turn your bible to Job 32:8,&quot;There is a spirit within man, the breath of the Almighty that makes him intelligent.&quot; On Facebook he is Chijioke Okwuosa, while his email okwuosachijioke@gmail.com. 
+
+            </div>            
+           <div  data-role="footer" data-position="fixed" style="text-transform: capitalize; text-align: center;">
+               <p><small>OKWUOSA CHIJIOKE CHINEDU</small></p>
+           </div>
+        </div>
+        
+        <div id="page30" data-role="page">
+            <div data-role='header' data-position='fixed'>
+                <a href='' data-rel='back' class='ui-btn ui-btn-left ui-alt-icon ui-nodisc-icon ui-corner-all ui-btn-icon-notext ui-icon-carat-l'>Back</a>
+                
+            </div>           
+                      
+            <div data-role="content" style="font-family:Comic Sans MS;color: #00ffcc; size: 8px; text-align: justify;">
+                <br/>When you enter a prayer meeting and someone is already crying then the person might be..(fill in the gap).
+                A popular saying goes &quot;train a woman and you&CloseCurlyQuote;ve trained a nation&quot;. Whoever sponsored this young woman to school has actually trained a generation. Sister Zac Poonen (did i say Zac? sorry Anthonia) served as Branch asst. sister&CloseCurlyQuote;s coordinator, branch sister&CloseCurlyQuote;s coordinator and then National sister&CloseCurlyQuote;s coordinator, she is a true mother in Israel. Born 29th of November to the Okajiegbe family of Njikoka L.G.A. she attended Udeke primary school Abagana and then Govt. secondary school Laranto Jos. She never gets bored when praying, singing, sharing burden, reading and cooking. Cooking? She doesn&CloseCurlyQuote;t want anyone around her to be hungry Maybe that&CloseCurlyQuote;s why she studied fisheries and aquaculture; she also enjoys any well prepared food. This lady is motherly in everything she likes encouraging, interceding, giving and being a solution but if you enjoy gossip, lies, deceit and arguing please just dey your lane. The ASF family will miss her presence but the prayer, bible-study and drama wings will miss her more. If you&CloseCurlyQuote;re around Abagana and you&CloseCurlyQuote;re hungry just visit AmaojiUmudun and then dial 07032656657. You can also contact her via Facebook @ OkajiegbeAnthoniaUjunwa or via her email on ujunwaanthonia@gmail.com. She loves the Bible but Romans 8:28 is her favourite. She has these words for the fellowship: &quot;this race is a personal one hence our priority should be our walk with Jesus, make pleasing him your priority.
+
+            </div>            
+           <div  data-role="footer" data-position="fixed" style="text-transform: capitalize; text-align: center;">
+               <p><small>ANTHONIA OKAJIEGBE</small></p>
+           </div>
+        </div>
+        
+        <div id="page31" data-role="page">
+            <div data-role='header' data-position='fixed'>
+                <a href='' data-rel='back' class='ui-btn ui-btn-left ui-alt-icon ui-nodisc-icon ui-corner-all ui-btn-icon-notext ui-icon-carat-l'>Back</a>
+                
+            </div>           
+                      
+            <div data-role="content" style="font-family:Comic Sans MS;color: #00ffcc; size: 8px; text-align: justify;">
+                <br/>Wow! How joyfulit was on the 20th of Jan 199x in the family of Mr. and Mrs.Onyegbule  as they received the blessing of this male child. He attended The Saint&CloseCurlyQuote;s Nursery and Primary School Surulere and Lagos State Model College KankonBadagry, both in Lagos. He is a graduate of Geology and hails from EzinihitteMbaise, Imo State. As a member of the fellowship he was committed to the Drama wing and served as the Year one coordinator, Drama coordinator and JCCF gen. secretary.  This brother is an extrovert and in his spare time enjoys singing, listening to messages and watching football. The aroma of a well preparedEgusi soup makes his heart leap and on seeing fufu by its side he is gladdened. He is attracted to those who smile a lot, are humble and diligent. He detests pride and arrogance. Whenever you study the Bible and come across 2 Cor. 5 vs 15 just remember Dubem cause that&CloseCurlyQuote;s one part of the Bible he never forgets. After now you can send him a mail @ cjaycee.cj@gmail.com. You can also reach him via Facebook @ ChidubemOnyegbule or just dial 08145344844. If you&CloseCurlyQuote;re in Lagos you can visit 90, Ijesha Road Surulere to see this brother. He leaves the fellowship with this words &quot;don&CloseCurlyQuote;t give up serving God, strive to keep your personal communion with him, He won&CloseCurlyQuote;t give up on you&quot;.
+            </div>            
+           <div  data-role="footer" data-position="fixed" style="text-transform: capitalize; text-align: center;">
+               <p><small>ONYEGBULE CHIDUBEM JOSHUA</small></p>
+           </div>
+        </div>
+        
+        <div id="page32" data-role="page">
+            <div data-role='header' data-position='fixed'>
+                <a href='' data-rel='back' class='ui-btn ui-btn-left ui-alt-icon ui-nodisc-icon ui-corner-all ui-btn-icon-notext ui-icon-carat-l'>Back</a>
+                
+            </div>           
+                      
+            <div data-role="content" style="font-family:Comic Sans MS;color: #00ffcc; size: 8px; text-align: justify;">
+                <br/>Brethren I have got yet another person to introduce, she is Ijeoma Peace Okafor from Anambra state. Let me tell you a little about this beloved daughter of Zion. She attended Onifetesi primary school, Lagos and holy family secondary school. She likes fried rice and chicken. This great Microbiologist can read a lot and hates hypocrisy. Honesty and diligence is her driving force. She is a member of the choral and bible study wing. One of the ways you can get in contact with this daughter of Zion is 08166434450. Her parting words to the house of ASF &quot;The only one thing a man needs in this life is to become like Jesus Christ&quot;. She was born on the 7th of August; she lives at &quot;ward 18, ihuowelle Ngo igbo-ukwuAnamabra.
+            </div>            
+           <div  data-role="footer" data-position="fixed" style="text-transform: capitalize; text-align: center;">
+               <p><small>OKAFOR IJEOMA PEACE</small></p>
+           </div>
+        </div>
+        
+        <div id="page33" data-role="page">
+            <div data-role='header' data-position='fixed'>
+                <a href='' data-rel='back' class='ui-btn ui-btn-left ui-alt-icon ui-nodisc-icon ui-corner-all ui-btn-icon-notext ui-icon-carat-l'>Back</a>
+                
+            </div>           
+                      
+            <div data-role="content" style="font-family:Comic Sans MS;color: #00ffcc; size: 8px; text-align: justify;">
+                <br/>Our blessed brother hails from Enugu North local Government in Enugu state. But reside at Ephraim Ugwu&CloseCurlyQuote;s compound Afia nine ogui Enugu. He was born on 7th January and attended W.F.C Enugu and union secondary school Enugu for his primary and secondary education. He studied Economics in NamdiAzikiwe University Awka. Sitting with friends and having a good time is his hobby .Chidera likes decency but dislikes indecency. His favorite food is well cooked soup egwusi or uchakiri. He is member of evangelism, his favorite verse is: Job vs 1-2 (life is meaningless without you, even if it means death I will go with you, I know you can do all things and no purpose of yours can be withheld. His parting words to the house is &quot;can I continue? Is it still possible? I must go away for am tired, but then oh lord to whom else can I go? Indeed no other for you alone have the word of life.Email:hillschidera@gmail.com, call him on 081055584288. Facebook: ChideraUgwu.
+            </div>            
+           <div  data-role="footer" data-position="fixed" style="text-transform: capitalize; text-align: center;">
+               <p><small>UGWU CHIDERA IKENNA</small></p>
+           </div>
+        </div>
+               
+        
+        <div id="page35" data-role="page">
+            <div data-role='header' data-position='fixed'>
+                <a href='' data-rel='back' class='ui-btn ui-btn-left ui-alt-icon ui-nodisc-icon ui-corner-all ui-btn-icon-notext ui-icon-carat-l'>Back</a>
+                
+            </div>           
+                      
+            <div data-role="content" style="font-family:Comic Sans MS;color: #00ffcc; size: 8px; text-align: justify;">
+                <br/>Behold our faithful brother! Born on 24th march, he is no one else but Okwuenu Chike Michael an indigene of Aniocha North, Delta State. To get to his current residence you&CloseCurlyQuote;d have to start by boarding a bus to Delta state then follow the address: No. 7 Arotoru off wille street Warri. He built sand houses in Santa Maria Primary School before proceeding to Daughter of Divine Love Catholic Junior Seminary. He is a graduate of the department of Surveying and Geoinformatics. His hobbies are playing Football and watching movies. He is a member of Choral Wing and Bible Study wing. His favourite bible verse is John 16:31(I have said all this that in the world you will have tribulation but in me you will have peace but be of good cheer I have overcome the world). Oya take down the number 07035538447, I have done my part, keep in touch with him on: FACEBOOK: OKWUENU CHIKE. Email: okwuenumichael@gmail.com
+
+
+            </div>            
+           <div  data-role="footer" data-position="fixed" style="text-transform: capitalize; text-align: center;">
+               <p><small>OKWUENU CHIKE MICHAEL</small></p>
+           </div>
+        </div>
+        
+        <div id="page36" data-role="page">
+            <div data-role='header' data-position='fixed'>
+                <a href='' data-rel='back' class='ui-btn ui-btn-left ui-alt-icon ui-nodisc-icon ui-corner-all ui-btn-icon-notext ui-icon-carat-l'>Back</a>
+                
+            </div>           
+                      
+            <div data-role="content" style="font-family:Comic Sans MS;color: #00ffcc; size: 8px; text-align: justify;">
+                <br/>&quot;In all our decisions in life as young people, there is a need for definite divine guidance because there is always a combat between God and the devil about capturing the youth. Therefore, be wise,be steadfast and make God your priority.&quot; She&CloseCurlyQuote;s our latest graduate from Pure and Industrial Chemistry Department. She hails from Udi local government area, Enugu state. Lives with her family in No. 18 Nnobi Street Independence Layout Enugu. She graduated from Queens secondary school Enugu and Central primary school OgheEzeagu. She loves Singing, no wonder she was a member of the Choral wing. Her birthday is on the 19th of June. She dislikes scornfulness. She loves to be served a hot plate of well-prepared Jollof rice. My number is 07065128027. Send a request on Facebook to Onyia Nnetochukwu, or email: nnetochukwup@gmail.com. While her favourite verses remain Romans 6:13, Hebrews 10:14. 
+
+
+
+            </div>            
+           <div  data-role="footer" data-position="fixed" style="text-transform: capitalize; text-align: center;">
+               <p><small>ONYIA NNETOCHUKWU SOCHIMA</small></p>
+           </div>
+        </div>
+        
+        <div id="page37" data-role="page">
+            <div data-role='header' data-position='fixed'>
+                <a href='' data-rel='back' class='ui-btn ui-btn-left ui-alt-icon ui-nodisc-icon ui-corner-all ui-btn-icon-notext ui-icon-carat-l'>Back</a>
+                
+            </div>           
+                      
+            <div data-role="content" style="font-family:Comic Sans MS;color: #00ffcc; size: 8px; text-align: justify;">
+                <br/>If you want to give this sister trouble, call Bro. Ifeanyi Ogbonna @ 08060220620.<br>
+&quot;Your spiritual life is the focal point of your life, get it right at this point and every other aspect of your life will fit in smoothly&quot;. This is the final words to the house of ASF by our great Public Administrator. She served as Branch Sisters cord and FYF charity cord.
+Osimiri Blessing is from Imo state.  She lives at #4 Ugwumba estate off Ohanku road aba, abia state. Blessing is very much single and loves rice, writing and singing are her hobbies no wonder she was in the choral wing during her stay with us. She stands for honesty and hard work and dislikes laziness and dishonesty. She attended Queens&CloseCurlyQuote;s modern nursery and primary school and finished her secondary school at Girls secondary school, Umuahia. 07065203999 is her mobile number nexyb20004real@yahoo.com  that&CloseCurlyQuote;s her e-mail, her Facebook address is Onyi Blessing Osimiri.
+            </div>            
+           <div  data-role="footer" data-position="fixed" style="text-transform: capitalize; text-align: center;">
+               <p><small>OSIMIRI BLESSING ONYEKACHI</small></p>
+           </div>
+        </div>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <!-- Gallery Page-->
+        
+        
+          <div id="gallery" data-role="page" data-theme="a">
+            <div  data-role="header" data-position="fixed">
+                <a href="#left-panel1" data-icon="bars" data-iconpos="notext">Menu</a>
+                <h1 style="text-transform: capitalize;">Koinonia</h1>
+                <div data-role="navbar">
+                    <ul style="text-transform: capitalize;">
+                        <li><a href="#main" data-icon="home" data-iconpos="top">Profile</a></li>
+                        <li><a href="#" data-icon="camera" data-iconpos="top" class="ui-btn-active ui-state-persist" >Gallery</a></li>
+                        <li><a href="#FYFExcos" data-icon="user" data-iconpos="top">FYF Excos</a></li>
+                    </ul>            
+
+                </div>
+            </div>
+                     
+           <div data-role="content" style="font-family: myfont1;">
+               <div class="ui-grid-a ui-responsive" style="text-align:center; padding:0;">
+                   <div class="ui-block-a">
+                       <div class="ui-bar ui-bar-b"><a class="anchor1" href="#photo1" title="img/gallery/000.jpg"> <img src="img/gallery/000.jpg" height="150" width="95%"/></a></div> 
+                   </div>
+                   <div class="ui-block-b">
+                       <div class="ui-bar ui-bar-b"><a class="anchor1" href="#photo1" title="img/gallery/00.jpg"> <img src="img/gallery/00.jpg" height="150" width="95%"/></a></div>
+                   </div>
+                   <div class="ui-block-a">
+                       <div class="ui-bar ui-bar-b"><a class="anchor1" href="#photo1" title="img/gallery/0.jpg"><img src="img/gallery/0.jpg" height="150" width="95%"/></a></div> 
+                   </div>
+                   <div class="ui-block-b">
+                       <div class="ui-bar ui-bar-b"><a class="anchor1" href="#photo1" title="img/gallery/1.jpg"><img src="img/gallery/1.jpg" height="150" width="95%"/></a></div>
+                   </div>
+                   
+                   <div class="ui-block-a">
+                       <div class="ui-bar ui-bar-b"><a class="anchor1" href="#photo1" title="img/gallery/2.jpg"><img src="img/gallery/2.jpg" height="150" width="95%"/></a></div> 
+                   </div>
+                   <div class="ui-block-b">
+                       <div class="ui-bar ui-bar-b"><a class="anchor1" href="#photo1" title="img/gallery/3.jpg"><img src="img/gallery/3.jpg" height="150" width="95%"/></a></div>
+                   </div>
+                   <div class="ui-block-a">
+                       <div class="ui-bar ui-bar-b"><a class="anchor1" href="#photo1" title="img/gallery/4.jpg"><img src="img/gallery/4.jpg" height="150" width="95%"/></a></div> 
+                   </div>
+                   <div class="ui-block-b">
+                       <div class="ui-bar ui-bar-b"><a class="anchor1" href="#photo1" title="img/gallery/5.jpg"><img src="img/gallery/5.jpg" height="150" width="95%"/></a></div>
+                   </div>
+                   
+                   <div class="ui-block-a">
+                       <div class="ui-bar ui-bar-b"><a class="anchor1" href="#photo1" title="img/gallery/6.jpg"><img src="img/gallery/6.jpg" height="150" width="95%"/></a></div> 
+                   </div>
+                   <div class="ui-block-b">
+                       <div class="ui-bar ui-bar-b"><a class="anchor1" href="#photo1" title="img/gallery/7.jpg"><img src="img/gallery/7.jpg" height="150" width="95%"/></a></div>
+                   </div>
+                   <div class="ui-block-a">
+                       <div class="ui-bar ui-bar-b"><a class="anchor1" href="#photo1" title="img/gallery/8.jpg"><img src="img/gallery/8.jpg" height="150" width="95%"/></a></div> 
+                   </div>
+                   <div class="ui-block-b">
+                       <div class="ui-bar ui-bar-b"><a class="anchor1" href="#photo1" title="img/gallery/9.jpg"><img src="img/gallery/9.jpg" height="150" width="95%"/></a></div>
+                   </div>
+                   
+                   <div class="ui-block-a">
+                       <div class="ui-bar ui-bar-b"><a class="anchor1" href="#photo1" title="img/gallery/10.jpg"><img src="img/gallery/10.jpg" height="150" width="95%"/></a></div> 
+                   </div>
+                    <div class="ui-block-b">
+                       <div class="ui-bar ui-bar-b"><a class="anchor1" href="#photo1" title="img/gallery/11.jpg"><img src="img/gallery/11.jpg" height="150" width="95%"/></a></div>
+                   </div>
+                   <div class="ui-block-a">
+                       <div class="ui-bar ui-bar-b"><a class="anchor1" href="#photo1" title="img/gallery/12.jpg"><img src="img/gallery/12.jpg" height="150" width="95%"/></a></div> 
+                   </div>
+                   <div class="ui-block-b">
+                       <div class="ui-bar ui-bar-b"><a class="anchor1" href="#photo1" title="img/gallery/13.jpg"><img src="img/gallery/13.jpg" height="150" width="95%"/></a></div>
+                   </div>
+                   
+                   <div class="ui-block-a">
+                       <div class="ui-bar ui-bar-b"><a class="anchor1" href="#photo1" title="img/gallery/14.jpg"><img src="img/gallery/14.jpg" height="150" width="95%"/></a></div> 
+                   </div>
+                   <div class="ui-block-b">
+                       <div class="ui-bar ui-bar-b"><a class="anchor1" href="#photo1" title="img/gallery/15.jpg"><img src="img/gallery/15.jpg" height="150" width="95%"/></a></div>
+                   </div>
+                   <div class="ui-block-a">
+                       <div class="ui-bar ui-bar-b"><a class="anchor1" href="#photo1" title="img/gallery/16.jpg"><img src="img/gallery/16.jpg" height="150" width="95%"/></a></div> 
+                   </div>
+                   <div class="ui-block-b">
+                       <div class="ui-bar ui-bar-b"><a class="anchor1" href="#photo1" title="img/gallery/17.jpg"><img src="img/gallery/17.jpg" height="150" width="95%"/></a></div>
+                   </div>
+                   
+                   <div class="ui-block-a">
+                       <div class="ui-bar ui-bar-b"><a class="anchor1" href="#photo1" title="img/gallery/18.jpg"><img src="img/gallery/18.jpg" height="150" width="95%"/></a></div> 
+                   </div>
+                   <div class="ui-block-b">
+                       <div class="ui-bar ui-bar-b"><a class="anchor1" href="#photo1" title="img/gallery/19.jpg"><img src="img/gallery/19.jpg" height="150" width="95%"/></a></div>
+                   </div>
+                   <div class="ui-block-a">
+                       <div class="ui-bar ui-bar-b"><a class="anchor1" href="#photo1" title="img/gallery/20.jpg"><img src="img/gallery/20.jpg" height="150" width="95%"/></a></div> 
+                   </div>
+                   <div class="ui-block-b">
+                       <div class="ui-bar ui-bar-b"><a class="anchor1" href="#photo1" title="img/gallery/21.JPG"><img src="img/gallery/21.JPG" height="150" width="95%"/></a></div>
+                   </div>
+                   <div class="ui-block-a">
+                       <div class="ui-bar ui-bar-b"><a class="anchor1" href="#photo1" title="img/gallery/22.jpg"><img src="img/gallery/22.jpg" height="150" width="95%"/></a></div> 
+                   </div>
+                   <div class="ui-block-b">
+                       <div class="ui-bar ui-bar-b"><a class="anchor1" href="#photo1" title="img/gallery/23.jpg"><img src="img/gallery/23.jpg" height="150" width="95%"/></a></div>
+                   </div>
+                   <div class="ui-block-a">
+                       <div class="ui-bar ui-bar-b"><a class="anchor1" href="#photo1" title="img/gallery/24.jpg"><img src="img/gallery/24.jpg" height="150" width="95%"/></a></div> 
+                   </div>
+                   <div class="ui-block-b">
+                       <div class="ui-bar ui-bar-b"><a class="anchor1" href="#photo1" title="img/gallery/25.jpg"><img src="img/gallery/25.jpg" height="150" width="95%"/></a></div>
+                   </div>
+                   
+                   <div class="ui-block-a">
+                       <div class="ui-bar ui-bar-b"><a class="anchor1" href="#photo1" title="img/gallery/27.jpg"><img src="img/gallery/27.jpg" height="150" width="95%"/></a></div> 
+                   </div>
+                   <div class="ui-block-b">
+                       <div class="ui-bar ui-bar-b"><a class="anchor1" href="#photo1" title="img/gallery/28.jpg"><img src="img/gallery/28.jpg" height="150" width="95%"/></a></div>
+                   </div>
+                   <div class="ui-block-a">
+                       <div class="ui-bar ui-bar-b"><a class="anchor1" href="#photo1" title="img/gallery/29.jpg"><img src="img/gallery/29.jpg" height="150" width="95%"/></a></div> 
+                   </div>
+                   <div class="ui-block-b">
+                       <div class="ui-bar ui-bar-b"><a class="anchor1" href="#photo1" title="img/gallery/30.jpg"><img src="img/gallery/30.jpg" height="150" width="95%"/></a></div>
+                   </div>
+                   
+                   <div class="ui-block-a">
+                       <div class="ui-bar ui-bar-b"><a class="anchor1" href="#photo1" title="img/gallery/31.jpg"><img src="img/gallery/31.jpg" height="150" width="95%"/></a></div> 
+                   </div>
+                   <div class="ui-block-b">
+                       <div class="ui-bar ui-bar-b"><a class="anchor1" href="#photo1" title="img/gallery/32.jpg"><img src="img/gallery/32.jpg" height="150" width="95%"/></a></div>
+                   </div>
+                   <div class="ui-block-a">
+                       <div class="ui-bar ui-bar-b"><a class="anchor1" href="#photo1" title="img/gallery/33.jpg"><img src="img/gallery/33.jpg" height="150" width="95%"/></a></div> 
+                   </div>
+                   <div class="ui-block-b">
+                       <div class="ui-bar ui-bar-b"><a class="anchor1" href="#photo1" title="img/gallery/34.jpg"><img src="img/gallery/34.jpg" height="150" width="95%"/></a></div>
+                   </div>
+                   
+                   <div class="ui-block-a">
+                       <div class="ui-bar ui-bar-b"><a class="anchor1" href="#photo1" title="img/gallery/35.jpg"><img src="img/gallery/35.jpg" height="150" width="95%"/></a></div> 
+                   </div>
+                   <div class="ui-block-b">
+                       <div class="ui-bar ui-bar-b"><a class="anchor1" href="#photo1" title="img/gallery/35b.jpg"><img src="img/gallery/35b.jpg" height="150" width="95%"/></a></div>
+                   </div>
+                   <div class="ui-block-a">
+                       <div class="ui-bar ui-bar-b"><a class="anchor1" href="#photo1" title="img/gallery/36.jpg"><img src="img/gallery/36.jpg" height="150" width="95%"/></a></div> 
+                   </div>
+                   <div class="ui-block-b">
+                       <div class="ui-bar ui-bar-b"><a class="anchor1" href="#photo1" title="img/gallery/37.jpg"><img src="img/gallery/37.jpg" height="150" width="95%"/></a></div>
+                   </div>
+                   
+                   <div class="ui-block-a">
+                       <div class="ui-bar ui-bar-b"><a class="anchor1" href="#photo1" title="img/gallery/38.jpg"><img src="img/gallery/38.jpg" height="150" width="95%"/></a></div> 
+                   </div>
+                   <div class="ui-block-b">
+                       <div class="ui-bar ui-bar-b"><a class="anchor1" href="#photo1" title="img/gallery/39.jpg"><img src="img/gallery/39.jpg" height="150" width="95%"/></a></div>
+                   </div>
+                   <div class="ui-block-a">
+                       <div class="ui-bar ui-bar-b"><a class="anchor1" href="#photo1" title="img/gallery/40.jpg"><img src="img/gallery/40.jpg" height="150" width="95%"/></a></div> 
+                   </div>
+                   <div class="ui-block-b">
+                       <div class="ui-bar ui-bar-b"><a class="anchor1" href="#photo1" title="img/gallery/41.jpg"><img src="img/gallery/41.jpg" height="150" width="95%"/></a></div>
+                   </div>
+                   
+                   <div class="ui-block-a">
+                       <div class="ui-bar ui-bar-b"><a class="anchor1" href="#photo1" title="img/gallery/42.jpg"><img src="img/gallery/42.jpg" height="150" width="95%"/></a></div> 
+                   </div>
+                   <div class="ui-block-b">
+                       <div class="ui-bar ui-bar-b"><a class="anchor1" href="#photo1" title="img/gallery/43.jpg"><img src="img/gallery/43.jpg" height="150" width="95%"/></a></div>
+                   </div>
+                   <div class="ui-block-a">
+                       <div class="ui-bar ui-bar-b"><a class="anchor1" href="#photo1" title="img/gallery/44.jpg"><img src="img/gallery/44.jpg" height="150" width="95%"/></a></div> 
+                   </div>
+                   <div class="ui-block-b">
+                       <div class="ui-bar ui-bar-b"><a class="anchor1" href="#photo1" title="img/gallery/45.jpg"><img src="img/gallery/45.jpg" height="150" width="95%"/></a></div>
+                   </div>
+               
+                   
+                   <div class="ui-block-a">
+                       <div class="ui-bar ui-bar-b"><a class="anchor1" href="#photo1" title="img/gallery/46.jpg"><img src="img/gallery/46.jpg" height="150" width="95%"/></a></div> 
+                   </div>
+                   <div class="ui-block-b">
+                       <div class="ui-bar ui-bar-b"><a class="anchor1" href="#photo1" title="img/gallery/47.jpg"><img src="img/gallery/47.jpg" height="150" width="95%"/></a></div>
+                   </div>
+                   <div class="ui-block-a">
+                       <div class="ui-bar ui-bar-b"><a class="anchor1" href="#photo1" title="img/gallery/48.jpg"><img src="img/gallery/48.jpg" height="150" width="95%"/></a></div> 
+                   </div>
+                  
+               
+               </div>          
+                   
+                            
+           </div>
+           
+           <div data-role="footer" data-position="fixed" style="text-transform: capitalize; text-align: center;">
+               
+               Memories are hard to forget<br/>
+               <small>ASF UNIZIK <sub>017 set</sub></small>
+              
+           </div>
+           
+            <div data-role="panel" id="left-panel1" data-display="overlay" style="text-transform: capitalize; font-family: myfont1; font-size: 14px">
+                <ul data-role="listview">
+                        <li data-icon="back"><a href="#" data-rel="close">Close</a></li>
+                        <li data-icon="mail"><a href="#FYFCordAddress">FYF Cord. Address</a></li>
+                        <li data-icon="info"><a href="#EditorialAddress">Editorial Crew Address</a></li>
+                        <li data-role="collapsible" data-inset="false" data-iconpos="right">
+                            <h3>Goodwill Messages</h3>
+                            <ul data-role="listview" data-theme="a">
+                              <li><a href="#biblestudy">Bible Study Wing</a></li>
+                              <li><a href="#charity">Charity Wing</a></li>
+                              <li><a href="#publicity">Publicity Wing</a></li>                 
+                            </ul>
+                        </li>
+                        <li data-role="collapsible" data-inset="false" data-iconpos="right">
+                            <h3>Articles</h3>
+                            <ul data-role="listview" data-theme="a">
+                              <li><a href="#chisom">Bro. Nwodo Chisom</a></li>
+                              <li><a href="#okwuchukwu">Bro. Okwuchkwu Ojukwu</a></li>
+                              <li><a href="#chidera">Bro. Chidera</a></li>                 
+                            </ul>
+                        </li>                        
+                        <li data-icon="phone"><a href="#about">About</a></li>
+                </ul><br/>
+                <a href="" class="close" data-role="button" data-icon="power" data-iconpos="left" data-mini="true">Exit App</a>
+            </div>       
+       </div>
+       
+       
+       <div id="photo1" data-role="page" data-fullscreen="true" data-dialog="true">
+            <div data-role='header' data-position='fixed'>
+                
+                
+            </div>
+            
+                      
+            <div data-role="content">
+             <img id='show1' src="" width="100%" height="100%"/><br />
+             <a href='' data-rel='back' class='ui-btn ui-btn-shadow ui-corner-all ui-btn-a'>Close</a>
+            </div>            
+           <div data-role="footer" data-position="fixed" style="text-transform: capitalize; text-align: center;">
+               
+               Arrows for Revival<br/>
+               <small>ASF UNIZIK <sub>017 set</sub></small>
+              
+           </div>
+       </div>
+       
+       
+       
+       
+       
+       <!--Panel content-->
+       
+       <div id="FYFCordAddress" data-role="page">
+            <div data-role='header' data-position='fixed'>
+                <a href='' data-rel='back' class='ui-btn ui-btn-left ui-alt-icon ui-nodisc-icon ui-corner-all ui-btn-icon-notext ui-icon-carat-l'>Back</a>
+                
+            </div>           
+                      
+            <div data-role="content" style="font-family:Comic Sans MS;color: #00ffcc; size: 8px; text-align: justify;">
+               <br/>Whenever God intends to do anything unique and spectacular in any generation, He singles out person(s) whom He uses as a channel to make known His counsel to men. Currently, we are experiencing so many mind-blowing occurrences in our generation today. We experience a lot of moral decadence, corruptions, in different sectors in the land.<br />
+               <br />The devil and his cohort seem to have taken over every sphere of life, ranging from the government to education, entertainment, media, health, finance etc and worst of it all , they have crept into the body of Christ and are currently wrecking havocs. The truth is that darkness has filled the earth and thick darkness has covered the people. Children use their parents for ritual, young persons who were counseled to remember their creator in the days of their youth now indulge in prostitution, armed robbery, drug trafficking etc. The political office holders now siphon public funds into personal accounts, whereas the poor masses are left to suffer and sort themselves out, the media and entertainment sectors now take their time to produce works that end up mocking our God and faith. Most times I ask myself, &quot;Is it a taboo for believers to rise up and occupy these positions, correct the wrongs therein and do exploit for God?&quot;
+               <br /><br />Matthew 5:14-16 made us to understand that the world is in darkness, and that the believers are the only ones who possess the light to lighten up the world (paraphrased). However, I wonder why we now scare away from showing the light for the world to see and become better.
+               <br /><br />A lot of thoughts began flowing into our minds on the plans of God concerning our lives and tomorrow when we leave campus. As we waited on God in the place of prayer  to know His commissioning words to us, he first told us that a besieging army is coming from a distant land against our land (Jeremiah 4:16). This is true; the devil has besieged almost everywhere and many believers are only finding a place to stand. Even the church is being besieged too, currently, there are intra and inter-denominational crises in the body of Christ; nobody seem to agree with the other.
+               <br /><br />Secondly, God made it clear to us from Psalms 127:3-5, that He needs sons whom He will use as arrows (weapons of warfare) in order to contend with the enemies at the gate and stir up revival in the land. Hence the name: &quot;<b>ARROWS FOR REVIVAL</b>&quot;
+               <br /><br />Initially, these words were heavy, but as sought for more clarity in the place of  prayers and bible study, we received clear bearing and specific instructions among which are;
+               <ul>
+               <li>Arrows are made and shaped for effective and specific assignments, therefore, we must submit ourselves to be made.</li>
+               <li>The arrowhead (Christ) and stabilizing fins/feather (Holy Spirit) are very vital as we journey in the master’s plan. An arrow without a head is just a mere stick.</li>
+               <li>The extent of harm (effectiveness) that an arrow can cause depends on the sharpness of the arrowhead. (Christ in me).</li>            
+               <li>The shaft (ourselves) must be dried up and made weightless, indicating that we must get rid of every weight, encumbrances, sins etc that shall make us heavy. The only weight of an arrow is that imposed on it by the arrowhead and fins.</li>
+               </ul>
+               <br />
+               As Arrows for Revival, it may not be clear to us now where our master (the warlord) intends to shoot us to, but we are rest assured that we shall represent Him well without missing our target. We shall not be missing in His quiver. To those He intends to shoot into the political, educational, agricultural, media, entertainment, mission field and even in our different homes, we ask for grace to submit ourselves for making, be found in His quiver always, be available for use whenever a need arises and go willingly in whatever direction, distance and assignment He desires.
+                <br /><br />Actually, it is one thing to catch this vision, and another thing altogether to run with it. We therefore solicit your unrelenting labour in the place of prayer for to God succeed with our lives.
+              <br /><br />  Your Brother,<br /> 
+								Ogboso Reuben Arua<br />
+								ASF NAU FYF Coordinator<br />
+					       			(2016/2017 session).
+            
+            </div>            
+           <div  data-role="footer" data-position="fixed" style="text-transform: capitalize; text-align: center;">
+               <p><small>FYF Cordinator</small></p>
+           </div>
+        </div>
+        
+        <div id="EditorialAddress" data-role="page">
+            <div data-role='header' data-position='fixed'>
+                <a href='' data-rel='back' class='ui-btn ui-btn-left ui-alt-icon ui-nodisc-icon ui-corner-all ui-btn-icon-notext ui-icon-carat-l'>Back</a>
+                
+            </div>           
+                      
+            <div data-role="content" style="font-family:Comic Sans MS;color: #00ffcc; size: 8px; text-align: justify;">
+               <br/>SONS OF GOD! Arrows for Revival! There is no arrow that shoots itself out the bow. There is no revival that occurs by just sitting still in a corner. We want to use medium to thank God for the life of every one of us. From different backgrounds, different locations, we came united under the Family of ASF, as Brothers and Sisters, as friends closer than brothers and sisters. It is a beautiful feeling to complete this phase of Growth. This is not the end to our fellowshipping with one another, we would only be separated temporarily. Memories have been built here In ASF, though not written on marbles but in the hearts of Brethren.
+               <br /><br />We are not been shot out to go and sit still, &quot;Darkness as covered the earth and thick darkness the people&quot;, the darkness in the lives of men is invariably thicker than the one in the earth, shine your light in the lives of men. All arrows are not the same, even if they have the same height, they might not have the same colour or function. You have a specific function. Throughout, the four or five years spent in ASF, remember the experiences, the process of building your most Holy Faith. Continue in this thy might. There is no promise of a problem-free life, but rather a promise of His Presence. We love you Brethren (those who have gone before us, those going with us and those who are still to come to us). 
+               <br /><br />The Edge we have over the world is the Love of God that we Share. There are many loving families of God outside here, and if you don&CloseCurlyQuote;t find one… Well it&CloseCurlyQuote;s an opportunity to cause REVIVAL. Start one up. Keep the altar ablaze. Words cannot express our gratitude to He that has the key of David, who opens and no man closes. Remain in Him.
+               <br /><br />
+               EDITOR IN CHIEF<br />
+               NDUKUBA, CRISPUS EBUBE.
+
+            
+            </div>            
+           <div  data-role="footer" data-position="fixed" style="text-transform: capitalize; text-align: center;">
+               <p><small>Editorial Crew</small></p>
+           </div>
+        </div>
+        
+        <div id="biblestudy" data-role="page">
+            <div data-role='header' data-position='fixed'>
+                <a href='' data-rel='back' class='ui-btn ui-btn-left ui-alt-icon ui-nodisc-icon ui-corner-all ui-btn-icon-notext ui-icon-carat-l'>Back</a>
+                
+            </div>           
+                      
+            <div data-role="content" style="font-family:Comic Sans MS;color: #00ffcc; size: 8px; text-align: justify;">
+               <br/>
+            We, the Bible Study Wing felicitates with our brethren and wing members in the 2017 FYF. Your labours of love can never be erased in our hearts, they&CloseCurlyQuote;ll continually stand as memorial before God.
+              As you&CloseCurlyQuote;re being separated for a higher ministry, may our generation never receive explanation in place of your manifestation. Shine on Sons of Light.
+
+            </div>            
+           <div  data-role="footer" data-position="fixed" style="text-transform: capitalize; text-align: center;">
+               <p><small>Bible Study Wing</small></p>
+           </div>
+        </div>
+        
+        <div id="charity" data-role="page">
+            <div data-role='header' data-position='fixed'>
+                <a href='' data-rel='back' class='ui-btn ui-btn-left ui-alt-icon ui-nodisc-icon ui-corner-all ui-btn-icon-notext ui-icon-carat-l'>Back</a>
+                
+            </div>           
+                      
+            <div data-role="content" style="font-family:Comic Sans MS;color: #00ffcc; size: 8px; text-align: justify;">
+               <br/>
+             Charity wing congratulates the outgoing final year students. We pray that as you are leaving the four walls of this university, God is going to open His door of healthiness, blessing and prosperity for you all. WE LOVE YOU ALL.
+            </div>            
+           <div  data-role="footer" data-position="fixed" style="text-transform: capitalize; text-align: center;">
+               <p><small>Charity Wing</small></p>
+           </div>
+        </div>
+        
+        <div id="publicity" data-role="page">
+            <div data-role='header' data-position='fixed'>
+                <a href='' data-rel='back' class='ui-btn ui-btn-left ui-alt-icon ui-nodisc-icon ui-corner-all ui-btn-icon-notext ui-icon-carat-l'>Back</a>
+                
+            </div>           
+                      
+            <div data-role="content" style="font-family:Comic Sans MS;color: #00ffcc; size: 8px; text-align: justify;">
+               <br/>With joy in our hearts we appreciate God for the lives of our graduates. The Lord who formed you as prepared you to be an Arrow for Revival.<br /> 
+                Brethren I implore you that when you find yourself in the outside world know that the world is in need of change (a touch of God),  and the who has sent you as a change agent, sent to change your world. Avail yourself to be an Arrow in His might hands. 
+                Congratulations!  Our amiable graduates your absence will be surely felt but your good works remain with us. <br /><br />
+                Publicity Secretary <br />
+                Ezinne Ebi
+
+
+            </div>            
+           <div  data-role="footer" data-position="fixed" style="text-transform: capitalize; text-align: center;">
+               <p><small>Publicity Wing</small></p>
+           </div>
+        </div>
+        
+        <div id="chisom" data-role="page">
+            <div data-role='header' data-position='fixed'>
+                <a href='' data-rel='back' class='ui-btn ui-btn-left ui-alt-icon ui-nodisc-icon ui-corner-all ui-btn-icon-notext ui-icon-carat-l'>Back</a>
+                
+            </div>           
+                      
+            <div data-role="content" style="font-family:Comic Sans MS;color: #00ffcc; size: 8px; text-align: justify;">
+               <br/><b></b>YOU ARE VALUABLE IN THE FAMILY OF GOD</b><br /><br/>Dearly beloved in the Lord, I rejoice with you on your membership into this family of God by finding Christ for your soul. He gives meaning to life and it is through Him that all creatures find their proper place. <br /><br />
+               Moreover, can I remind you that having been a part of this family you have a role to play in keeping with the gift of God has released on you. Rom. 12:6-8 &quot;And since we have gifts that differ according to the grace given to us, let each exercise them accordingly …&quot; , it is this role that makes you valuable and indispensable except you fail to comply with God, which will be very destructive. Matt. 5:13.<br /><br />
+               Hence, you are expected to do business for this family with your own gifting and faithfulness will be required of you Luke 19:13,17. Please dear, don&CloseCurlyQuote;t look down on your gift because no gift is better than the other. Each has an important role to perform. I Cor. 12:14-26. Know it that failure to discover your gift and using it result in you envying others causing yourself sorrow and pain.<br /><br />
+               In conclusion, your greatness, honour, joy, fulfilment in life rest on your discovery and usage of your gifting to serve God&CloseCurlyQuote;s house as His spirit directs you. You are indeed valuable to God&CloseCurlyQuote;s house. <br /><br />
+               May God help us all in this pilgrim journey here on earth, till we meet finally in Heaven.<br /><br />
+               Nwodo, Vincent Chisom<br />300 L
+
+
+
+            </div>            
+           <div  data-role="footer" data-position="fixed" style="text-transform: capitalize; text-align: center;">
+               <p><small>Nwodo Vicent Chisom</small></p>
+           </div>
+        </div>
+        
+        <div id="okwuchukwu" data-role="page">
+            <div data-role='header' data-position='fixed'>
+                <a href='' data-rel='back' class='ui-btn ui-btn-left ui-alt-icon ui-nodisc-icon ui-corner-all ui-btn-icon-notext ui-icon-carat-l'>Back</a>
+                
+            </div>           
+                      
+            <div data-role="content" style="font-family:Comic Sans MS;color: #00ffcc; size: 8px; text-align: justify;">
+                <br/><b></b>PEOPLE NEED YOUR PRODUCT</b><br /><br/>
+                The disciple remained in Jerusalem when Jesus ascended. Even after receiving the promised Holy Spirit. But God used Saul the persecutor to actualize the charge He gave the disciples while on earth in Acts 1:8. &quot;But Saul began to destroy the Church. Going from house to house, he dragged off men and women and put them in prison. Those who had been scattered preached the word wherever they went.&quot; Acts 8:3-4 .
+                <br /><br />The plan of God is that after the Holy Spirit has fallen on the disciples that they will preach the Good news first in Jerusalem, to Judea and Samaria and to the ends of the earth. However, when they received the Holy Spirit they remained in Jerusalem Preaching, healing the sick, fellowshipping together, breaking bread and sharing things in common. But people out there were needing their PRODUCT! 
+                <br /><br />Hence, Saul became an instrument of persecution and he scattered the church in Jerusalem. Lets see Philip in Samaria (Acts 8:4-8), The people of Samaria really needed somebody to show them goodness (Ps. 4:6). Permit me to say that to see light is their utmost desire. For when Simon the sorcerer proffered the counterfeit light they all gave in to his teaching; &quot;…and all the people both high and low, gave him their attention and exclaimed, this man is the divine power known as the great power.&quot;<br /><br />
+                &quot;My people are destroyed for lack of knowledge …&quot; these are the words of God in Hosea 4:6. The people of Samaria being in darkness yearned for light. Satan on his part used that as an avenue to provide a counterfeit light, so as to destroy as many lives as he could, he still works with the principle of lies till today. He used the sorcerer to subject the Samaritans to abject darkness. All these while light has been hiding itself under a bushel somewhere in Jerusalem. <br /><br />
+Why subject yourself under while you have the product which people out there need? Do you know that whatsoever the Lord did, satan tries to imitate. Satan is drawing many souls who long for you product to hell on daily basis simply because you chose to keep your light under bushel. Jesus teaching the beatitudes said, &quot;You are the light of the world, a city on a hill cannot be hidden, neither do people light a lamp and put it under a bushel. Instead they put it on its stand, and it gives light to everyone in the house&quot; matt. 5:14-15. <br /><br />
+Let your light shine. Rise up and Shine! People are wandering in the storm because they need this light. Satan on his part is constantly pushing men deeper into damnation. The lives of the Samaritans changed tremendously on the arrival of the original light. Even Simon the Sorcerer desired this original light; &quot;Philip went down to a city in Samaria and proclaimed the Christ there. When the crowds heard Philip and saw the miraculous signs he did. With shrieks, evil spirits came out of many and many paralytics and cripples were healed. So there was great joy in the city!&quot; Acts 8:5-8. It is note-worthy that the appearance of the light, made Satan to go into oblivion. There was a great joy in the city, &quot;Yes! This is the actual thing we need&quot;, they deserted the sorcerer and followed the Light. The sorcerer himself also desired for the undiluted Light. <br /><br />
+Afterwards, the angel of the Lord said to Philip, &quot;Go south to the road, the desert road that goes down from Jerusalem to Gaza, Acts 8:26&quot;. <br /><br />
+I will like to state; If you really wish to impact lives with your product there is no idle waiting. Even Jesus had to go places where His Product was needed, John 4:3-4. The people of Galilee needed the Product of Jesus. On His way to supply the products to the Galileans, He had to go through Samaria because the Samaritan woman would be waiting by the well of Samaria to receive her portion. Her desire is the fountain that gives eternal life and Jesus had it. Get up, locate people that need your product, while you are looking for them, believe that you will find them. <br /><br />
+The holy spirit of God said to Philip &quot;Go South to the desert road…&quot; , there is an Ethiopian eunuch reading the bible along that road but he is not understanding, Philip is with the product which the Ethiopian desired. He explained to this eunuch what his soul needed. He told him about Jesus. As they travelled along the road, they came across some water and Philip baptized him. When they stepped out of the water the Holy Spirit took him away to other people that were in need of his product. The eunuch went on his way rejoicing. <br /><br />
+&quot;Philip however appeared in Azotus and travelled about, preaching the gospel in all the towns until he reached Ceasarea.&quot; <br /><br />
+In every life God has deposited a product which other person(s) dearly desires. You will begin to succeed with your life when the hurt and problems of others begins to matter to you. Jesus hurts when others hurt. Heb. 4:15. Those who unlock your compassion are those to whom your life have been deposited with the product which they desire. Jesus has the product which the woman of Nain. He had to go to the city of Nain at the time the woman needed Him most. Her son is been carried out to be buried (Luke 7:11-17). <br /><br />
+Brethren, why not arose now there is still day. Jesus said &quot;I will do the work of He who sent me now there is day, for night is coming from when no man can work&quot; John 9:4. At the appearance of the light darkness must give way. The people of Samaria were held in darkness by Simon the sorcerer until Philip (Light) surfaced. Hence, Christians ought to make sure that the light is kept shining so that darkness will not hold the church bound. <br /><br />
+The church must march on! The gates of hell will never prevail over it. Philip hide not your Identity, Get up! Seek those that are in need of your product. <br /><br />
+
+Okwuchukwu Ojukwu
+
+
+
+            </div>            
+           <div  data-role="footer" data-position="fixed" style="text-transform: capitalize; text-align: center;">
+               <p><small>Okwuchukwu Ojukwu</small></p>
+           </div>
+        </div>
+        
+         <div id="chidera" data-role="page">
+            <div data-role='header' data-position='fixed'>
+                <a href='' data-rel='back' class='ui-btn ui-btn-left ui-alt-icon ui-nodisc-icon ui-corner-all ui-btn-icon-notext ui-icon-carat-l'>Back</a>
+                
+            </div>           
+                      
+            <div data-role="content" style="font-family:Comic Sans MS;color: #00ffcc; size: 8px; text-align: justify;">
+                <br/><b></b>TO WHOM SHALL WE GO?</b><br /><br/>
+                Jesus asked a crucial question? &quot;Do you also want to go?&quot; in John 6:66-67, &quot;From that time many of His disciples went back, and walked no more with Him. Then said Jesus to the twelve, Will you also go away?&quot; Many have gone away, great men and women, people that we have looked up to and desired to be like. But why do they go? Some say &quot;I can&CloseCurlyQuote;t continue&quot;,&quot;This is a hard saying&quot;,and &quot;The demands are too much&quot;. <br /><br />
+Though Jesus was not so bothered by the people leaving He was interested in the people who have stood by Him. He is concerned about YOU and ME! Can you hear Him asking you specifically what your own view is? Do you also want to join them? <br /><br />
+This is a serious matter and I&CloseCurlyQuote;m challenged at Peter&CloseCurlyQuote;s answer: &quot;Lord, to whom shall we go&quot;, Peter have come to a personal conclusion after his assessment of the other ways and places, which he could go. Actually to whom shall you go if you decide to leave? To pleasure that marriage, friendship, or material wealth could offer. <br /><br />
+Men like Daniel , Hanniah, Azariah and Mishael came to a complete resolution in their hearts, and deliberately went against the instructions of King Nebuchadnezzar. Only when the matter is settled in your heart will you then be able to stand out. <br /><br />
+Can you hear the conclusion, even though it is hard, decide to remain in Him. Where else can eternity be secured if not in Christ? What is worth exchanging for an ever-lasting life in Christ? Do you know tomorrow? It is clear that Daniel and the three Hebrew youths had no alternative except Jesus Christ. <br /><br />
+Prayerfully make a commitment with this song: <br /><br />
+<i>I have made up my mind to serve you for life<br />
+Breathe on me, O Lord breathe on me <br />
+This is my decision for life there is no going back<br />
+Breathe on me, O Lord breathe.</i><br /><br />
+
+Bro Chidera (Graduate) 
+
+
+            </div>            
+           <div  data-role="footer" data-position="fixed" style="text-transform: capitalize; text-align: center;">
+               <p><small>Chidera</small></p>
+           </div>
+        </div>
+        
+        <div id="about" data-role="page">
+            <div data-role='header' data-position='fixed'>
+                <a href='' data-rel='back' class='ui-btn ui-btn-left ui-alt-icon ui-nodisc-icon ui-corner-all ui-btn-icon-notext ui-icon-carat-l'>Back</a>
+                
+            </div>           
+                      
+            <div data-role="content" style="font-family:Comic Sans MS;color: #00ffcc; size: 8px; text-align: justify;">
+                <br/>This is a digital year book for the 2016/2017 session's Final years of Anglican Students fellowship, Nnamdi Azikiwe University, Awka (Unizik).<br /><br /> This application gives you access to the profiles of the fellowship's final year students, provides a gallery containing pictures of Final years, alumni and some present students, it equally contains some goodwill messages and articles.<br /><br />
+                This idea was conceived and implemented by Okwuosa Chijioke a member of the above mentioned fellowship.<br /><br />Okwuosa Chijioke is a website developer, a mobile application developer and currently into Digital marketing, he is a graduate of Computer science, Nnamdi Azikiwe University, Awka, Anambra State, Nigeria.<br /><br /> I want to thank God for the wisdom and motivation he gave me to start and finish this project, i want to equally thank Ogboso Reuben(My Final year coordinator) for granting me the permission to embark on this project, i wont forget to thank Bro. Arinze Chinweze, Bro Crispus Ndukuba and Sis Oluchi Ezemokwe whom i had to call on  at one point or the other to get the materials i needed for the project.<br /><br />
+                I hope u will enjoy and treasure this work. You can contact Okwuosa Chijioke @ <br />Email:okwuosachijioke@gmail.com<br /> Phone:07037381011. <br/>Thanks and God Bless.
+                <br />  <div style="text-align: center;"><small> &copy;2018</small></div> 
+            </div>            
+           <div  data-role="footer" data-position="fixed" style="text-transform: capitalize; text-align: center;">
+               <p><small>Okwuosa Chijioke Chinedu</small></p>
+           </div>
+        </div>
+        
+        
+        
+        
+        
+        
+          <!-- FYF Excos Page-->
+        
+        
+          <div id="FYFExcos" data-role="page" data-theme="a">
+            <div  data-role="header" data-position="fixed">
+                <a href="#left-panel2" data-icon="bars" data-iconpos="notext">Menu</a>
+                <h1 style="text-transform: capitalize;">Koinonia</h1>
+                <div data-role="navbar">
+                    <ul style="text-transform: capitalize;">
+                        <li><a href="#main" data-icon="home" data-iconpos="top">Profile</a></li>
+                        <li><a href="#gallery" data-icon="camera" data-iconpos="top">Gallery</a></li>
+                        <li><a href="#" data-icon="user" data-iconpos="top" class="ui-btn-active ui-state-persist">FYF Excos</a></li>
+                    </ul>            
+
+                </div>
+            </div>
+                     
+           <div data-role="content" style="font-family: myfont1;">
+               <div class="ui-grid-a ui-responsive" style="text-align:center; padding:0;">
+                   <div class="ui-block-a">
+                       <div class="ui-bar ui-bar-b"><a class="anchor2" href="#photo2" title="img/27.JPG" id="FYF Coordinator"> <img src="img/27.JPG" height="150" width="95%"/><br/>Ogboso Reuben<br /><small>FYF Coordinator</small> </a></div> 
+                   </div>
+                  <div class="ui-block-b">
+                       <div class="ui-bar ui-bar-b"><a class="anchor2" href="#photo2" title="img/26.jpg" id="FYF Secretary"> <img src="img/26.jpg" height="150" width="95%"/><br/>Ojukwu Chisom<br /><small>FYF Secretary</small> </a></div> 
+                   </div>
+                    <div class="ui-block-a">
+                       <div class="ui-bar ui-bar-b"><a class="anchor2" href="#photo2" title="img/3.JPG" id="Permsite Coordinator"> <img src="img/3.JPG" height="150" width="95%"/><br/>Chinweze Arinze<br /><small>Permsite Coordinator</small> </a></div> 
+                   </div>
+                  <div class="ui-block-b">
+                       <div class="ui-bar ui-bar-b"><a class="anchor2" href="#photo2" title="img/29.jpg" id="Tempsite Coordinator"> <img src="img/29.jpg" height="150" width="95%"/><br/>Okwuosa Chijioke<br /><small>Tempsite Coordinator</small> </a></div> 
+                   </div> 
+                   <div class="ui-block-a">
+                       <div class="ui-bar ui-bar-b"><a class="anchor2" href="#photo2" title="img/22.jpg" id="Ifite Coordinator"> <img src="img/22.jpg" height="150" width="95%"/><br/>Nwoko Uchechi<br /><small>Ifite Coordinator</small> </a></div> 
+                   </div>
+                  <div class="ui-block-b">
+                       <div class="ui-bar ui-bar-b"><a class="anchor2" href="#photo2" title="img/34.jpg" id="Agulu Coordinator"> <img src="img/34.jpg" height="150" width="95%"/><br/>Ezemokwe Oluchi<br /><small>Agulu Coordinator</small> </a></div> 
+                   </div> 
+                   <div class="ui-block-a">
+                       <div class="ui-bar ui-bar-b"><a class="anchor2" href="#photo2" title="img/20.jpg" id="Amaenyi Coordinator"> <img src="img/20.jpg" height="150" width="95%"/><br/>Ezebialu Nnedimma<br /><small>Amaenyi Coordinator</small> </a></div> 
+                   </div>
+                  <div class="ui-block-b">
+                       <div class="ui-bar ui-bar-b"><a class="anchor2" href="#photo2" title="img/16.jpg" id="Prayer Coordinator"> <img src="img/16.jpg" height="150" width="95%"/><br/>Ikezuagu Blessing<br /><small>Prayer Coordinator</small> </a></div> 
+                   </div> 
+                   <div class="ui-block-a">
+                       <div class="ui-bar ui-bar-b"><a class="anchor2" href="#photo2" title="img/23.JPG" id="Editor-in-Chief"> <img src="img/23.JPG" height="150" width="95%"/><br/>Ndukaba Crispus<br /><small>Editor-in-Chief</small> </a></div> 
+                   </div>
+                                 
+               </div>          
+                   
+                            
+           </div>
+           
+           <div data-role="footer" data-position="fixed" style="text-transform: capitalize; text-align: center;">
+              FYF Executives<br/>
+               <small>ASF UNIZIK <sub>017 set</sub></small>
+           </div>
+           
+            <div data-role="panel" id="left-panel2" data-display="overlay" style="text-transform: capitalize; font-family: myfont1; font-size: 14px" data-dismissible="false">
+                <ul data-role="listview">
+                        <li data-icon="back"><a href="#" data-rel="close">Close</a></li>
+                        <li data-icon="mail"><a href="#FYFCordAddress">FYF Cord. Address</a></li>
+                        <li data-icon="info"><a href="#EditorialAddress">Editorial Crew Address</a></li>
+                        <li data-role="collapsible" data-inset="false" data-iconpos="right">
+                            <h3>Goodwill Messages</h3>
+                            <ul data-role="listview" data-theme="a">
+                              <li><a href="#biblestudy">Bible Study Wing</a></li>
+                              <li><a href="#charity">Charity Wing</a></li>
+                              <li><a href="#publicity">Publicity Wing</a></li>                 
+                            </ul>
+                        </li>
+                        <li data-role="collapsible" data-inset="false" data-iconpos="right">
+                            <h3>Articles</h3>
+                            <ul data-role="listview" data-theme="a">
+                              <li><a href="#chisom">Bro. Nwodo Chisom</a></li>
+                              <li><a href="#okwuchukwu">Bro. Okwuchkwu Ojukwu</a></li>
+                              <li><a href="#chidera">Bro. Chidera</a></li>                 
+                            </ul>
+                        </li>                        
+                        <li data-icon="phone"><a href="#about">About</a></li>
+                </ul><br/>
+                <a href="" class="close" data-role="button" data-icon="power" data-iconpos="left" data-mini="true">Exit App</a>
+            </div>       
+       </div>
+       
+       
+       <div id="photo2" data-role="page" data-fullscreen="true">
+            <div data-role='header' data-position='fixed'>
+              <a href='' data-rel='back' class='ui-btn ui-btn-left ui-alt-icon ui-nodisc-icon ui-corner-all ui-btn-icon-notext ui-icon-carat-l'>Back</a>  
+                
+            </div>
+            
+                      
+            <div data-role="content">
+             <img id='show2' src="" width="100%" height="100%"/><br />
+            </div>            
+           
+            <div  data-role="footer" data-position="fixed" style="text-transform: capitalize; text-align: center;">
+               <p id='theName1'></p>
+           </div>
+       </div>
+
+       
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+    </body>
+</html>
